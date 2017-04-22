@@ -1,0 +1,26 @@
+[
+  {
+     "classId": "3",
+     "title": "JavaScript For Beginners - Learn JavaScript From Scratch",
+     "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgH1Z1_3x_hjj2qy.png",
+     "total_chapters": 12,
+     "finish_chapters": 2,
+     "next_chapters": "Examining Famous Frameworks and Libraries"
+  },
+  {
+     "classId": "5",
+     "title": "Learn and Understand AngularJS",
+     "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDota2_3x_libh6j.png",
+     "total_chapters": 12,
+     "finish_chapters": 3,
+     "next_chapters": "ourse Project - Components & Databinding"
+  },
+  {
+    "classId": "6",
+    "title": "JavaScript",
+    "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDestiny_3x_aeqzvg.png",
+    "total_chapters": 12,
+    "finish_chapters": 9,
+    "next_chapters": "Framework Aside: Faking Namespaces"
+  }
+]

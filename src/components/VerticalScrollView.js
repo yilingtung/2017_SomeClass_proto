@@ -48,7 +48,7 @@ class VerticalScrollView extends Component{
                       <View>
                         <Text style={styles.classRatingNumberWrapper}>
                           <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
-                          
+
                         </Text>
                       </View>
                     }
@@ -82,9 +82,8 @@ const styles = {
     marginHorizontal: 12,
   },
   cardImg: {
-    width: 160,
     height: 88,
-    borderRadius: 5,
+    borderRadius: 3,
   },
   cardContent: {
     flexDirection: 'column',
@@ -99,34 +98,6 @@ const styles = {
     justifyContent: 'space-between',
     overflow: 'hidden',
   },
-  classRatingNumber: {
-    color: 'rgb(90, 187, 214)',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  classRatingNumberWrapper: {
-    color: 'rgb(90, 187, 214)',
-    /*color: 'rgb(206, 206, 206)',*/
-    fontSize: 12,
-    marginRight: 5,
-  },
-  tagWrapper: {
-    flexDirection: 'row',
-    marginRight: 10,
-    overflow: 'hidden',
-  },
-  tag: {
-    borderStyle: 'solid',
-    borderColor: '#D8D8D8',
-    borderWidth: 0.5,
-    marginVertical: 5,
-    marginRight: 5,
-  },
-  tagText: {
-    color: '#B5B5B5',
-    fontSize: 12,
-    paddingHorizontal: 8,
-  }
 }
 
 export default VerticalScrollView;

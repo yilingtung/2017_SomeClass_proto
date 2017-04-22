@@ -70,7 +70,24 @@ export const MyClassesPageNavigator = StackNavigator({
         style: styles.navBar
       })
     }
-  }},{
+  },
+  ClassDetailPage: {
+    screen: ClassDetailPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        left: (
+          <NavBarBackButton />
+        ),
+        right: (
+          <NavBarLikeButton />
+        ),
+        title: (state.params.title),
+        titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
+  }
+},{
   headerMode: 'float'
 });
 

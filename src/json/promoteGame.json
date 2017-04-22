@@ -1,35 +1,43 @@
 [
    {
-      "title": "League of Legends 2",
+      "classId": "1",
+      "title": "Learn Vue 1 JS introduction to simple reactive JavaScript",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgLeagueoflegends_3x_cef6sq.png",
       "descriptions": "2012年上市，2015年，2016年。",
       "rating_stars": 3,
       "tags":[ "Ruby" ],
-      "Number_of_ratings": 246
+      "Number_of_ratings": 246,
+      "total_chapters": 12
    },
    {
-      "title": "CS 1.6 2",
+      "classId": "2",
+      "title": "CS 1.6 2 Hearts Stone Hearts Stone Hearts Stone",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgCounterstrike_3x_loicoc.png",
       "descriptions": "全球",
       "rating_stars": 1,
       "tags":[ "JavaScript", "React", "Node.js" ],
-      "Number_of_ratings": 29
+      "Number_of_ratings": 29,
+      "total_chapters": 12
    },
    {
-      "title": "H1Z1",
+      "classId": "3",
+      "title": "JavaScript For Beginners - Learn JavaScript From Scratch",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgH1Z1_3x_hjj2qy.png",
       "descriptions": "城市遭到攻擊",
       "rating_stars": 5,
       "tags":[ "Design", "UI", "UX" ],
-      "Number_of_ratings": 1
+      "Number_of_ratings": 1,
+      "total_chapters": 12
    },
    {
+      "classId": "4",
       "title": "Hearts Stone",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgHearthstone_3x_rebqar.png",
       "descriptions": "爐石之心",
       "rating_stars": 2,
       "tags":[ "SQL", "Python" ],
       "Number_of_ratings": 12,
+      "total_chapters": 12,
       "videoList": [
         {
           "title": "黑岩台，最難的 對決",
@@ -42,19 +50,23 @@
       ]
    },
    {
-      "title": "Dota 2",
+      "classId": "5",
+      "title": "Learn and Understand AngularJS",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDota2_3x_libh6j.png",
       "descriptions": "鬥塔",
       "rating_stars": 3,
       "tags":[ "C", "C++", "Java" ],
-      "Number_of_ratings": 26
+      "Number_of_ratings": 26,
+      "total_chapters": 12
    },
    {
+      "classId": "JavaScript",
       "title": "Destiny",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDestiny_3x_aeqzvg.png",
       "descriptions": "命運",
       "rating_stars": 3,
       "tags":[ "jQuery", "CSS", "Sass" ],
-      "Number_of_ratings": 2
+      "Number_of_ratings": 2,
+      "total_chapters": 12
    }
 ]

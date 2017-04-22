@@ -87,7 +87,7 @@ const styles = {
     overflow: 'hidden'
   },
   cardImg: {
-    borderRadius: 5,
+    borderRadius: 3,
   },
   cardContent: {
     paddingVertical: 10,
