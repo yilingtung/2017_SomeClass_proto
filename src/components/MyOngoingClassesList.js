@@ -11,7 +11,7 @@ import ClassRatingStars from './ClassRatingStars';
 import Tags from './tags';
 import ProgressBar from './progressBar';
 
-class MyClassesList extends Component{
+class MyOngoingClassesList extends Component{
   constructor(props){
     super(props);
     this.state = {};
@@ -21,7 +21,7 @@ class MyClassesList extends Component{
       <ScrollView style={styles.container}>
         <View style={styles.cardList}>
           {
-            this.props.myOngoingClassesData.map((item) => {
+            this.props.classesListData.map((item) => {
               var ratio = Number(Math.round(item.finish_chapters/item.total_chapters * 100).toFixed(0));
               return(
                 <View key={item.title}>
@@ -105,4 +105,4 @@ const styles = {
   },
 }
 
-export default MyClassesList;
+export default MyOngoingClassesList;

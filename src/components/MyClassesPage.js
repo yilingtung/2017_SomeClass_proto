@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import { } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
-import MyClassesList from './MyClassesList';
+import MyOngoingClassesList from './MyOngoingClassesList';
+import MyFinishedClassesList from './MyFinishedClassesList';
 import promoteGame from './../json/promoteGame';
 import myOngoingClasses from './../json/myOngoingClasses';
+import myFinishedClasses from './../json/myFinishedClasses';
 
 class MyClassesPage extends Component{
   constructor(props){
     super(props);
     this.state = {
       classesData: promoteGame,
-      myOngoingClassesData: myOngoingClasses
+      myOngoingClassesData: myOngoingClasses,
+      myFinishedClassesData: myFinishedClasses,
     };
   }
   goToClassDetailPage = (game)=>{
@@ -25,17 +28,23 @@ class MyClassesPage extends Component{
         tabBarInactiveTextColor={'rgb(197, 198, 200)'}
         tabBarTextStyle={{fontWeight:'bold'}}
       >
-        <MyClassesList
+        <MyOngoingClassesList
           tabLabel="進行中"
           width={80}
           height={80}
           navigation={this.props.navigation}
-          classesData={this.state.classesData}
-          myOngoingClassesData={this.state.myOngoingClassesData}
+          classesListData={this.state.myOngoingClassesData}
           goToClassDetailPage={this.goToClassDetailPage}
         />
-        <MyClassesList tabLabel="已完成" navigation={this.props.navigation} />
-        <MyClassesList tabLabel="願望清單" navigation={this.props.navigation} />
+        <MyFinishedClassesList
+          tabLabel="已完成"
+          width={80}
+          height={80}
+          navigation={this.props.navigation}
+          classesListData={this.state.myFinishedClassesData}
+          goToClassDetailPage={this.goToClassDetailPage}
+        />
+        <MyOngoingClassesList tabLabel="願望清單" navigation={this.props.navigation} />
       </ScrollableTabView>
     );
   }
