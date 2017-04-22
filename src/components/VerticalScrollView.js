@@ -9,6 +9,7 @@ import {
 import Line from './line';
 import ViewTitle from './ViewTitle';
 import ClassRatingStars from './ClassRatingStars';
+import Tags from './tags';
 class VerticalScrollView extends Component{
   constructor(props){
     super(props);
@@ -40,27 +41,21 @@ class VerticalScrollView extends Component{
                       {item.title}
                     </Text>
                     <View style={styles.classRatingWrapper}>
+                    {this.props.showRatingStars &&
                       <ClassRatingStars rating_stars={item.rating_stars} />
+                    }
+                    {this.props.showRatingNumber &&
                       <View>
                         <Text style={styles.classRatingNumberWrapper}>
                           <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
-
+                          
                         </Text>
                       </View>
+                    }
                     </View>
-                    <View style={styles.tagWrapper}>
-                      {
-                        item.tags.map((subitem) => {
-                        return(
-                          <View
-                            key={subitem}
-                            style={styles.tag}
-                          >
-                            <Text numberOfLines={1} style={styles.tagText}>{subitem}</Text>
-                          </View>
-                        )
-                      })}
-                    </View>
+                    {this.props.showTags &&
+                      <Tags tags={item.tags} />
+                    }
                   </View>
                 </TouchableOpacity>
                 <View style={{marginLeft: 12}}>

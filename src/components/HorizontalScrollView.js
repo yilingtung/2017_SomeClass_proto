@@ -9,6 +9,7 @@ import {
 import Line from './line';
 import ViewTitle from './ViewTitle';
 import ClassRatingStars from './ClassRatingStars';
+import Tags from './tags';
 class HorizontalScrollView extends Component{
   constructor(props){
     super(props);
@@ -58,19 +59,7 @@ class HorizontalScrollView extends Component{
                         }
                       </View>
                       {this.props.showTags &&
-                        <View style={styles.tagWrapper}>
-                          {
-                            item.tags.map((subitem) => {
-                            return(
-                              <View
-                                key={subitem}
-                                style={styles.tag}
-                              >
-                                <Text numberOfLines={1} style={styles.tagText}>{subitem}</Text>
-                              </View>
-                            )
-                          })}
-                        </View>
+                        <Tags tags={item.tags} />
                       }
                     </View>
                   </TouchableOpacity>
@@ -119,23 +108,6 @@ const styles = {
     fontSize: 12,
     marginRight: 10,
   },
-  tagWrapper: {
-    flexDirection: 'row',
-    marginRight: 25,
-    overflow: 'hidden',
-  },
-  tag: {
-    borderStyle: 'solid',
-    borderColor: '#D8D8D8',
-    borderWidth: 0.5,
-    marginVertical: 5,
-    marginRight: 5,
-  },
-  tagText: {
-    color: '#B5B5B5',
-    fontSize: 12,
-    paddingHorizontal: 10,
-  }
 }
 
 export default HorizontalScrollView;

@@ -58,6 +58,9 @@ class BrowsePage extends Component{
         <VerticalScrollView
           title={'大家都在看'}
           width={150}
+          showRatingStars={true}
+          showRatingNumber={true}
+          showTags={true}
           goToClassDetailPage={this.goToClassDetailPage}
           itemList={this.state.promoteGame}
         />

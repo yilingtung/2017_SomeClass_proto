@@ -3,6 +3,7 @@ import { StackNavigator } from 'react-navigation';
 import BrowsePage from './components/BrowsePage';
 import ClassDetailPage from './components/ClassDetailPage';
 import GameDetailPage from './components/GameDetailPage';
+import MyClassesPage from './components/MyClassesPage';
 import SearchBar, { SearchBarButton } from './components/searchBar';
 //最上面導覽列的特殊元件
 import { NavBarBackButton, NavBarLikeButton } from './components/navBarButton';
@@ -54,6 +55,22 @@ export const BrowsePageNavigator = StackNavigator({
     }
   }
 },{
+  headerMode: 'float'
+});
+export const MyClassesPageNavigator = StackNavigator({
+  MyClassesPage: {
+    screen: MyClassesPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        title:'我的課程',
+        titleStyle: styles.navBarTitle,
+        right: (
+          <SearchBarButton onPress={()=>{this.searchBar.searchGames()}}/>
+        ),
+        style: styles.navBar
+      })
+    }
+  }},{
   headerMode: 'float'
 });
 

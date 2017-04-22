@@ -7,7 +7,10 @@ import {
 } from 'react-native';
 //import GamesPage from './GamesPage';
 //GamePage被包裝成 stackNavigator
-import { BrowsePageNavigator } from './../Router.js';
+import {
+  BrowsePageNavigator,
+  MyClassesPageNavigator,
+} from './../Router.js';
 //ChannelsPage
 import ChannelsPage from './ChannelsPage';
 
@@ -23,7 +26,7 @@ class TabBar extends Component{
       <TabBarIOS
         unselectedTintColor={styles.tabBarItemText.color}
         tintColor='rgb(90, 187, 214)'
-        unselectedTintColor='rgb(197, 198, 200)'
+        unselectedItemTintColor='rgb(197, 198, 200)'
         barTintColor="white"
       >
         <TabBarIOS.Item
@@ -70,14 +73,14 @@ class TabBar extends Component{
           icon={require('./../img/btnVedio_normal.png')}
           selectedIcon={require('./../img/btnVedio_normal.png')}
           title="課程"
-          selected={this.state.selectedTab === 'Following'}
+          selected={this.state.selectedTab === 'MyClassesPage'}
           onPress={() => {
             this.setState({
-              selectedTab: 'Following'
+              selectedTab: 'MyClassesPage'
             });
           }}
         >
-          {<View></View>}
+          <MyClassesPageNavigator />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           icon={require('./../img/btnMyClass_normal.png')}
