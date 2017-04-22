@@ -4,7 +4,7 @@
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgLeagueoflegends_3x_cef6sq.png",
       "descriptions": "2012年上市，2015年，2016年。",
       "rating_stars": 3,
-      "tags":[ "Ruby" ],
+      "tags":[ "程式", "JavaScript" ],
       "Number_of_ratings": 246
    },
    {
@@ -12,7 +12,7 @@
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgCounterstrike_3x_loicoc.png",
       "descriptions": "全球",
       "rating_stars": 1,
-      "tags":[ "JavaScript", "React", "Node.js" ],
+      "tags":[ "料理", "蛋糕" ],
       "Number_of_ratings": 29
    },
    {
@@ -20,7 +20,7 @@
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgH1Z1_3x_hjj2qy.png",
       "descriptions": "城市遭到攻擊",
       "rating_stars": 5,
-      "tags":[ "Design", "UI", "UX" ],
+      "tags":[ "設計", "網頁設計", "UX" ],
       "Number_of_ratings": 1
    },
    {
@@ -28,7 +28,7 @@
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgHearthstone_3x_rebqar.png",
       "descriptions": "爐石之心",
       "rating_stars": 2,
-      "tags":[ "SQL", "Python" ],
+      "tags":[ "程式", "Python" ],
       "Number_of_ratings": 12,
       "videoList": [
         {

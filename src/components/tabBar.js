@@ -5,9 +5,10 @@ import {
   Image,
   TabBarIOS
 } from 'react-native';
-//import GamesPage from './GamesPage';
-//GamePage被包裝成 stackNavigator
+//BrowsePageNavigator被包裝成 stackNavigator
 import { BrowsePageNavigator } from './../Router.js';
+import { CategoryPageNavigator } from './../Router.js';
+import CameraPage from './CameraPage';
 //ChannelsPage
 import ChannelsPage from './ChannelsPage';
 
@@ -51,7 +52,7 @@ class TabBar extends Component{
             });
           }}
         >
-          <ChannelsPage />
+          <CategoryPageNavigator />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           icon={require('./../img/btnCamera_normal.png')}
@@ -64,7 +65,7 @@ class TabBar extends Component{
             });
           }}
         >
-          {<View></View>}
+          <CameraPage />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           icon={require('./../img/btnVedio_normal.png')}

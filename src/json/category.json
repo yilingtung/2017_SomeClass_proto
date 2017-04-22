@@ -1,0 +1,23 @@
+[
+  {
+    "title": "音樂",
+    "subCategory": [ {"title": "吉他"}, {"title": "鋼琴"}, {"title": "小提琴"}, {"title": "貝斯"}, {"title": "古箏"}]
+  },
+  {
+    "title": "程式",
+    "subCategory": [{"title": "JavaScript"}, {"title": "PHP"}, {"title": "C/C++"}, {"title": "C#"}, {"title": "Objective-C"}, {"title": "Python"}]
+  },
+  {
+    "title": "語言",
+    "subCategory": [{"title": "英語"}, {"title": "捷克語"}, {"title": "德文"}, {"title": "泰文"}]
+  },
+  {
+    "title": "料理",
+    "subCategory": [{"title": "蛋糕"}, {"title": "麵食"}, {"title": "三明治"}, {"title": "蛋餅"}, {"title": "咖哩"}, {"title": "貝果"}, {"title": "手捲"}]
+  },
+  {
+    "title": "設計",
+    "subCategory": [{"title": "平面設計"}, {"title": "水彩"}, {"title": "素描"}, {"title": "網頁設計"}, {"title": "服裝設計"}]
+  }
+
+]
