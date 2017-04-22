@@ -7,8 +7,7 @@ import {
 } from 'react-native';
 //import GamesPage from './GamesPage';
 //GamePage被包裝成 stackNavigator
-import { stackNavigator as StackNavigator } from './../Router';
-import { categoryStackNavigator as CategoryStackNavigator } from './../Router';
+import { BrowsePageNavigator } from './../Router.js';
 //ChannelsPage
 import ChannelsPage from './ChannelsPage';
 
@@ -16,31 +15,34 @@ class TabBar extends Component{
   constructor(props){
     super(props);
     this.state = {
-      selectedTab:'GamesPage'
+      selectedTab:'BrowsePage'
     };
   }
   render(){
     return(
       <TabBarIOS
         unselectedTintColor={styles.tabBarItemText.color}
-        tintColor="rgb(100,65,165)"
+        tintColor='rgb(90, 187, 214)'
+        unselectedTintColor='rgb(197, 198, 200)'
         barTintColor="white"
       >
         <TabBarIOS.Item
-          icon={require('./../img/btnGamesSelectedF.png')}
+          icon={require('./../img/btnBrowse_normal.png')}
+          selectedIcon={require('./../img/btnBrowse_normal.png')}
           title="首頁"
-          selected={this.state.selectedTab === 'GamesPage'}
+          selected={this.state.selectedTab === 'BrowsePage'}
           onPress={() => {
             /*按下這個tab，要設定state，等等這個state會重新把上面的selected變成是成真的情況*/
             this.setState({
-              selectedTab: 'GamesPage'
+              selectedTab: 'BrowsePage'
             });
           }}
         >
-          <StackNavigator />
+          <BrowsePageNavigator />
         </TabBarIOS.Item>
         <TabBarIOS.Item
-          icon={require('./../img/btnChannels.png')}
+          icon={require('./../img/btnCategory_normal.png')}
+          selectedIcon={require('./../img/btnCategory_normal.png')}
           title="分類"
           selected={this.state.selectedTab === 'ChannelsPage'}
           onPress={() => {
@@ -49,12 +51,25 @@ class TabBar extends Component{
             });
           }}
         >
-          <CategoryStackNavigator />
+          <ChannelsPage />
         </TabBarIOS.Item>
         <TabBarIOS.Item
-          icon={require('./../img/btnFollowing.png')}
-          selectedIcon={require('./../img/btnFollowing.png')}
+          icon={require('./../img/btnCamera_normal.png')}
+          selectedIcon={require('./../img/btnCamera_normal.png')}
           title="開課"
+          selected={this.state.selectedTab === 'Camera'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'Camera'
+            });
+          }}
+        >
+          {<View></View>}
+        </TabBarIOS.Item>
+        <TabBarIOS.Item
+          icon={require('./../img/btnVedio_normal.png')}
+          selectedIcon={require('./../img/btnVedio_normal.png')}
+          title="課程"
           selected={this.state.selectedTab === 'Following'}
           onPress={() => {
             this.setState({
@@ -65,22 +80,9 @@ class TabBar extends Component{
           {<View></View>}
         </TabBarIOS.Item>
         <TabBarIOS.Item
-          icon={require('./../img/btnMe.png')}
-          selectedIcon={require('./../img/btnMe.png')}
-          title="熊課"
-          selected={this.state.selectedTab === 'Class'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'Class'
-            });
-          }}
-        >
-          {<View></View>}
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          icon={require('./../img/btnMe.png')}
-          selectedIcon={require('./../img/btnMe.png')}
-          title="自己"
+          icon={require('./../img/btnMyClass_normal.png')}
+          selectedIcon={require('./../img/btnMyClass_normal.png')}
+          title="我"
           selected={this.state.selectedTab === 'Me'}
           onPress={() => {
             this.setState({
@@ -115,14 +117,11 @@ const styles = {
   },
   tabBarItemText: {
     alignSelf: 'center',
-    color: 'rgb(187,187,187)',
+    color: 'rgb(197, 198, 200)',
     fontSize: 10,
     position: 'absolute',
     bottom: 5,
   },
-  tabActive: {
-    color: 'rgb(100,65,165)'
-  }
 }
 
 export default TabBar;

@@ -1,23 +1,38 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
-import GamesPage from './components/GamesPage';
+import BrowsePage from './components/BrowsePage';
+import ClassDetailPage from './components/ClassDetailPage';
 import GameDetailPage from './components/GameDetailPage';
-import CategoryPage from './components/CategoryPage';
 import SearchBar, { SearchBarButton } from './components/searchBar';
 //最上面導覽列的特殊元件
 import { NavBarBackButton, NavBarLikeButton } from './components/navBarButton';
 
-export const stackNavigator = StackNavigator({
-  GamesPage: {
-    screen: GamesPage,
+export const BrowsePageNavigator = StackNavigator({
+  BrowsePage: {
+    screen: BrowsePage,
     navigationOptions: {
       header: ({state}) => ({
-        title: (
-          <SearchBar ref={(input)=>{this.searchBar = input}}/>
-        ),
+        title:'首頁',
+        titleStyle: styles.navBarTitle,
         right: (
           <SearchBarButton onPress={()=>{this.searchBar.searchGames()}}/>
         ),
+        style: styles.navBar
+      })
+    }
+  },
+  ClassDetailPage: {
+    screen: ClassDetailPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        left: (
+          <NavBarBackButton />
+        ),
+        right: (
+          <NavBarLikeButton />
+        ),
+        title: (state.params.title),
+        titleStyle: styles.navBarTitle,
         style: styles.navBar
       })
     }
@@ -42,28 +57,10 @@ export const stackNavigator = StackNavigator({
   headerMode: 'float'
 });
 
-export const categoryStackNavigator = StackNavigator({
-  CategoryPage: {
-    screen: CategoryPage,
-    navigationOptions: {
-      header: ({state})=>({
-        right: (
-          <SearchBarButton />
-        ),
-        title: '分類',
-        titleStyle: styles.navBarTitle,
-        style: styles.navBar
-      })
-    }
-  }
-},{
-
-});
-
 const styles = {
   navBar:{
-    backgroundColor: 'rgb(100,65,165)',
-    height:64
+    backgroundColor: 'rgb(90, 187, 214)',
+    height:64,
   },
   navBarTitle: {
     color: 'rgb(255,255,255)'

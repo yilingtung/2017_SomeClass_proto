@@ -1,27 +1,39 @@
 [
    {
-      "title": "League of Legends",
+      "title": "League of Legends 2",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgLeagueoflegends_3x_cef6sq.png",
-      "descriptions": "2012年上市，2015年，2016年。"
+      "descriptions": "2012年上市，2015年，2016年。",
+      "rating_stars": 3,
+      "tags":[ "Ruby" ],
+      "Number_of_ratings": 246
    },
    {
-      "title": "CS 1.6",
+      "title": "CS 1.6 2",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgCounterstrike_3x_loicoc.png",
-      "descriptions": "全球"
+      "descriptions": "全球",
+      "rating_stars": 1,
+      "tags":[ "JavaScript", "React", "Node.js" ],
+      "Number_of_ratings": 29
    },
    {
       "title": "H1Z1",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgH1Z1_3x_hjj2qy.png",
-      "descriptions": "城市遭到攻擊"
+      "descriptions": "城市遭到攻擊",
+      "rating_stars": 5,
+      "tags":[ "Design", "UI", "UX" ],
+      "Number_of_ratings": 1
    },
    {
       "title": "Hearts Stone",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgHearthstone_3x_rebqar.png",
       "descriptions": "爐石之心",
+      "rating_stars": 2,
+      "tags":[ "SQL", "Python" ],
+      "Number_of_ratings": 12,
       "videoList": [
         {
           "title": "黑岩台，最難的 對決",
-          "url": "https://www.youtube.com/embed/ZOXa4AelLEo"
+          "url": "https://youtu.be/taqJfCKHbDo"
         },
         {
           "title": "勇闖黑岩山，普通難度",
@@ -32,11 +44,17 @@
    {
       "title": "Dota 2",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDota2_3x_libh6j.png",
-      "descriptions": "鬥塔"
+      "descriptions": "鬥塔",
+      "rating_stars": 3,
+      "tags":[ "C", "C++", "Java" ],
+      "Number_of_ratings": 26
    },
    {
       "title": "Destiny",
       "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDestiny_3x_aeqzvg.png",
-      "descriptions": "命運"
+      "descriptions": "命運",
+      "rating_stars": 3,
+      "tags":[ "jQuery", "CSS", "Sass" ],
+      "Number_of_ratings": 2
    }
 ]

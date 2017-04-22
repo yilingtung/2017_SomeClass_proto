@@ -36,7 +36,7 @@ class SearchBarButton extends Component{
       <TouchableOpacity
         onPress={this.props.onPress}
       >
-        <Image style={styles.headerIcon} source={require('./../img/btnCast.png')} />
+        <Image style={styles.headerIcon} source={require('./../img/btnSearch.png')} />
       </TouchableOpacity>
     );
   }
@@ -52,7 +52,7 @@ const styles = {
   headerIcon: {
     width: 33,
     height: 33,
-    marginRight: 10
+    marginRight: 10,
   }
 }
 

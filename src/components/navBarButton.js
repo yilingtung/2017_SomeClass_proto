@@ -35,7 +35,7 @@ class NavBarLikeButton extends Component{
 
 const styles = {
   header: {
-    backgroundColor: 'rgb(100,65,165)',
+    backgroundColor: 'rgb(90, 187, 214)',
     flexDirection: 'row',
     justifyContent: 'center',
     paddingLeft:8.5,
