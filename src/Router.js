@@ -37,22 +37,6 @@ export const BrowsePageNavigator = StackNavigator({
         style: styles.navBar
       })
     }
-  },
-  GameDetailPage: {
-    screen: GameDetailPage,
-    navigationOptions: {
-      header: ({state}) => ({
-        left: (
-          <NavBarBackButton />
-        ),
-        right: (
-          <NavBarLikeButton />
-        ),
-        title: (state.params.title),
-        titleStyle: styles.navBarTitle,
-        style: styles.navBar
-      })
-    }
   }
 },{
   headerMode: 'float'
