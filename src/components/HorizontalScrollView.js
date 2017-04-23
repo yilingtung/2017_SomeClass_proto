@@ -9,6 +9,7 @@ import {
 import Line from './line';
 import ViewTitle from './ViewTitle';
 import ClassRatingStars from './ClassRatingStars';
+import Tags from './tags';
 class HorizontalScrollView extends Component{
   constructor(props){
     super(props);
@@ -44,33 +45,15 @@ class HorizontalScrollView extends Component{
                       <Text numberOfLines={this.props.classNameOneLine ? 2 : 1} style={{marginRight: 5, lineHeight: 20}}>
                         {item.title}
                       </Text>
-                      <View style={styles.classRatingWrapper}>
-                        {this.props.showRatingStars &&
-                          <ClassRatingStars rating_stars={item.rating_stars} />
-                        }
-                        {this.props.showRatingNumber &&
-                          <View>
-                            <Text style={styles.classRatingNumberWrapper}>
-                              <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
-                              人學習
-                            </Text>
-                          </View>
-                        }
-                      </View>
+                      {this.props.showRating &&
+                        <ClassRatingStars
+                          rating_stars={item.rating_stars}
+                          Number_of_ratings={item.Number_of_ratings}
+                          showSmallRatingStar={this.props.showSmallRatingStar}
+                        />
+                      }
                       {this.props.showTags &&
-                        <View style={styles.tagWrapper}>
-                          {
-                            item.tags.map((subitem) => {
-                            return(
-                              <View
-                                key={subitem}
-                                style={styles.tag}
-                              >
-                                <Text numberOfLines={1} style={styles.tagText}>{subitem}</Text>
-                              </View>
-                            )
-                          })}
-                        </View>
+                        <Tags tags={item.tags} />
                       }
                     </View>
                   </TouchableOpacity>
@@ -98,44 +81,11 @@ const styles = {
     overflow: 'hidden'
   },
   cardImg: {
-    borderRadius: 5,
+    borderRadius: 3,
   },
   cardContent: {
     paddingVertical: 10,
   },
-  classRatingWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  classRatingNumber: {
-    color: 'rgb(90, 187, 214)',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  classRatingNumberWrapper: {
-    color: 'rgb(90, 187, 214)',
-    /*color: 'rgb(206, 206, 206)',*/
-    fontSize: 12,
-    marginRight: 10,
-  },
-  tagWrapper: {
-    flexDirection: 'row',
-    marginRight: 25,
-    overflow: 'hidden',
-  },
-  tag: {
-    borderStyle: 'solid',
-    borderColor: '#D8D8D8',
-    borderWidth: 0.5,
-    marginVertical: 5,
-    marginRight: 5,
-  },
-  tagText: {
-    color: '#B5B5B5',
-    fontSize: 12,
-    paddingHorizontal: 10,
-  }
 }
 
 export default HorizontalScrollView;

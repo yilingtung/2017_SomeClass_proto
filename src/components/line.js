@@ -16,8 +16,8 @@ class Line extends Component{
 
 const styles = {
   line: {
-    height: .5,
-    backgroundColor: 'rgba(0,0,0,.1)',
+    height: 1,
+    backgroundColor: 'rgba(189,189,189,.2)',
   },
 }
 

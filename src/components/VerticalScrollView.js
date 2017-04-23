@@ -9,6 +9,7 @@ import {
 import Line from './line';
 import ViewTitle from './ViewTitle';
 import ClassRatingStars from './ClassRatingStars';
+import Tags from './tags';
 class VerticalScrollView extends Component{
   constructor(props){
     super(props);
@@ -39,28 +40,16 @@ class VerticalScrollView extends Component{
                     <Text numberOfLines={2} style={{lineHeight: 20}}>
                       {item.title}
                     </Text>
-                    <View style={styles.classRatingWrapper}>
-                      <ClassRatingStars rating_stars={item.rating_stars} />
-                      <View>
-                        <Text style={styles.classRatingNumberWrapper}>
-                          <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
-
-                        </Text>
-                      </View>
-                    </View>
-                    <View style={styles.tagWrapper}>
-                      {
-                        item.tags.map((subitem) => {
-                        return(
-                          <View
-                            key={subitem}
-                            style={styles.tag}
-                          >
-                            <Text numberOfLines={1} style={styles.tagText}>{subitem}</Text>
-                          </View>
-                        )
-                      })}
-                    </View>
+                    {this.props.showRating &&
+                      <ClassRatingStars
+                        rating_stars={item.rating_stars}
+                        Number_of_ratings={item.Number_of_ratings}
+                        showSmallRatingStar={this.props.showSmallRatingStar}
+                      />
+                    }
+                    {this.props.showTags &&
+                      <Tags tags={item.tags} />
+                    }
                   </View>
                 </TouchableOpacity>
                 <View style={{marginLeft: 12}}>
@@ -87,9 +76,8 @@ const styles = {
     marginHorizontal: 12,
   },
   cardImg: {
-    width: 160,
     height: 88,
-    borderRadius: 5,
+    borderRadius: 3,
   },
   cardContent: {
     flexDirection: 'column',
@@ -98,40 +86,6 @@ const styles = {
     flex: 1,
     justifyContent: 'center',
   },
-  classRatingWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    overflow: 'hidden',
-  },
-  classRatingNumber: {
-    color: 'rgb(90, 187, 214)',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  classRatingNumberWrapper: {
-    color: 'rgb(90, 187, 214)',
-    /*color: 'rgb(206, 206, 206)',*/
-    fontSize: 12,
-    marginRight: 5,
-  },
-  tagWrapper: {
-    flexDirection: 'row',
-    marginRight: 10,
-    overflow: 'hidden',
-  },
-  tag: {
-    borderStyle: 'solid',
-    borderColor: '#D8D8D8',
-    borderWidth: 0.5,
-    marginVertical: 5,
-    marginRight: 5,
-  },
-  tagText: {
-    color: '#B5B5B5',
-    fontSize: 12,
-    paddingHorizontal: 8,
-  }
 }
 
 export default VerticalScrollView;

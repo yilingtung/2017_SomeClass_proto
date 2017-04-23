@@ -6,13 +6,13 @@ import {
 import Line from './line';
 import HorizontalScrollView from './HorizontalScrollView';
 import VerticalScrollView from './VerticalScrollView';
-import TwoColList from './twoColList';
 //Games JSON Data
 import promoteGame from './../json/promoteGame';
 
 class BrowsePage extends Component{
   constructor(props){
     super(props);
+    console.log(1);
     this.state = {
       promoteGame: promoteGame
     };
@@ -31,8 +31,7 @@ class BrowsePage extends Component{
           width={270}
           height={120}
           showViewTitleButton={true}
-          showRatingStars={true}
-          showRatingNumber={true}
+          showRating={true}
           showTags={true}
           goToClassDetailPage={this.goToClassDetailPage}
           itemList={this.state.promoteGame}
@@ -43,7 +42,8 @@ class BrowsePage extends Component{
           height={120}
           showViewTitleButton={true}
           classNameOneLine={true}
-          showRatingStars={true}
+          showRating={true}
+          showSmallRatingStar={true}
           goToClassDetailPage={this.goToClassDetailPage}
           itemList={this.state.promoteGame}
         />
@@ -58,6 +58,8 @@ class BrowsePage extends Component{
         <VerticalScrollView
           title={'大家都在看'}
           width={150}
+          showRating={true}
+          showTags={true}
           goToClassDetailPage={this.goToClassDetailPage}
           itemList={this.state.promoteGame}
         />

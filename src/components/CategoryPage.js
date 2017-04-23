@@ -101,7 +101,6 @@ class CategoryPage extends Component {
         <Line />
         <ScrollView style={{height: Style.DEVICE_HEIGHT - 94 - 49}}>
           <VerticalScrollView
-            title={""}
             width={150}
             goToClassDetailPage={this.goToClassDetailPage}
             itemList={this.state.promoteGame}

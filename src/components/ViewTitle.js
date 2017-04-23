@@ -12,13 +12,17 @@ class ViewTitle extends Component{
   }
   render(){
     return(
-      <View style={styles.headerWrapper}>
-        <Text style={styles.headerTitle}>{this.props.title}</Text>
-        {this.props.titleButton &&
-          <TouchableOpacity style={styles.headerBtnWrapper}>
-            <Image source={require('./../img/btnArrow.png')} />
-          </TouchableOpacity>
-        }
+      <View>
+      {this.props.title &&
+        <View style={styles.headerWrapper}>
+          <Text style={styles.headerTitle}>{this.props.title}</Text>
+          {this.props.titleButton &&
+            <TouchableOpacity style={styles.headerBtnWrapper}>
+              <Image source={require('./../img/btnArrow.png')} />
+            </TouchableOpacity>
+          }
+        </View>
+      }
       </View>
     )
   }

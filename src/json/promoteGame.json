@@ -2,11 +2,29 @@
    {
       "title": "C 語言入門特訓",
       "thumbnail_image": "https://hahow.in/images/58677f12f108e00800c25f52",
-      "descriptions": "25單元，看影片就能掌握精髓，使用C語言經典教材，從零紮根程式設計。",
+      "descriptions": "25單元，看影片就能掌握精髓，使用C語言經典教材，從零紮根程式設計。25單元，看影片就能掌握精髓，使用C語言經典教材，從零紮根程式設計。ASP.NET Web API is a framework for building HTTP services that can be accessed from any client including browsers and mobile devices. It is an ideal platform for building RESTful applications on the .NET Framework. However it can also use to create non RESTful services.",
       "rating_stars": 3,
       "tags":[ "程式", "C/C++" ],
       "Number_of_ratings": 246,
-      "total_chapters": 8
+      "total_chapters": 8,
+      "chapters": [
+        {
+          "chapter_title": "第一章名稱",
+          "sub_chapters": [
+            {
+              "sub_chapters_title": "第一章的第一個步驟",
+              "sub_chapters_media": "https://hahow.in/images/58677f12f108e00800c25f52",
+              "sub_chapters_description": "第一章的第一個步驟的描述"
+            },
+            {
+
+            }
+          ]
+        },
+        {
+
+        }
+      ]
    },
    {
       "title": "靈魂的代言人-塔羅牌義全解析",
@@ -108,4 +126,5 @@
       "Number_of_ratings": 2,
       "total_chapters": 8
    }
+
 ]
