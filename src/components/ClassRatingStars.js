@@ -28,21 +28,53 @@ class ClassRatingStars extends Component{
     };
 
     return(
-      <View style={styles.classScoreWrapper}>
-      {array}
+      <View>
+      {this.props.showSmallRatingStar?
+        <View style={{flexDirection:'row',margin:5,justifyContent:'flex-end'}}>
+          <Text style={{color:'rgb(232, 167, 60)',fontSize:16,fontWeight:'bold',marginRight:3}}>{this.props.rating_stars}</Text>
+          <Image key={index} style={styles.star} source={require('./../img/iconStarFull.png')} />
+        </View>
+         :
+        <View style={styles.classRatingWrapper}>
+          <View style={styles.classRatingWrapper}>
+          {array}
+          </View>
+          {this.props.rating_stars==null&&
+            <Text style={styles.classRatingNumberWrapper}>
+              未評分
+            </Text>
+          }
+          {this.props.Number_of_ratings &&
+            <Text style={styles.classRatingNumberWrapper}>
+              ({this.props.Number_of_ratings})
+            </Text>
+          }
+        </View>
+      }
       </View>
     )
   }
 }
 
 const styles = {
-  classScoreWrapper: {
+  classRatingWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 5,
   },
   star: {
     marginRight: 5,
+  },
+  classRatingNumber: {
+    color: 'rgb(90, 187, 214)',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  classRatingNumberWrapper: {
+    /*color: 'rgb(90, 187, 214)',*/
+    color: 'rgb(206, 206, 206)',
+    fontSize: 12,
+    marginRight: 10,
   },
 }
 

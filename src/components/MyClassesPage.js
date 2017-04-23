@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
-import MyOngoingClassesList from './MyOngoingClassesList';
-import MyFinishedClassesList from './MyFinishedClassesList';
+import MyClassesListView from './MyClassesListView';
 import promoteGame from './../json/promoteGame';
 import myOngoingClasses from './../json/myOngoingClasses';
 import myFinishedClasses from './../json/myFinishedClasses';
@@ -10,6 +9,7 @@ import myFinishedClasses from './../json/myFinishedClasses';
 class MyClassesPage extends Component{
   constructor(props){
     super(props);
+    console.log(12);
     this.state = {
       classesData: promoteGame,
       myOngoingClassesData: myOngoingClasses,
@@ -27,8 +27,9 @@ class MyClassesPage extends Component{
         tabBarActiveTextColor={'rgb(90, 187, 214)'}
         tabBarInactiveTextColor={'rgb(197, 198, 200)'}
         tabBarTextStyle={{fontWeight:'bold'}}
+        style={styles.container}
       >
-        <MyOngoingClassesList
+        <MyClassesListView
           tabLabel="進行中"
           width={80}
           height={80}
@@ -36,7 +37,7 @@ class MyClassesPage extends Component{
           classesListData={this.state.myOngoingClassesData}
           goToClassDetailPage={this.goToClassDetailPage}
         />
-        <MyFinishedClassesList
+        <MyClassesListView
           tabLabel="已完成"
           width={80}
           height={80}
@@ -44,13 +45,23 @@ class MyClassesPage extends Component{
           classesListData={this.state.myFinishedClassesData}
           goToClassDetailPage={this.goToClassDetailPage}
         />
-        <MyOngoingClassesList tabLabel="願望清單" navigation={this.props.navigation} />
+        <MyClassesListView
+          tabLabel="願望清單"
+          width={80}
+          height={80}
+          navigation={this.props.navigation}
+          classesListData={this.state.classesData}
+          goToClassDetailPage={this.goToClassDetailPage}
+        />
       </ScrollableTabView>
     );
   }
 }
 
 const styles = {
+  container: {
+    marginBottom: 48
+  }
 }
 
 export default MyClassesPage;

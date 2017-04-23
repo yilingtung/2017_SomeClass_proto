@@ -17,6 +17,7 @@ import ChannelsPage from './ChannelsPage';
 class TabBar extends Component{
   constructor(props){
     super(props);
+    console.log(123123);
     this.state = {
       selectedTab:'BrowsePage'
     };

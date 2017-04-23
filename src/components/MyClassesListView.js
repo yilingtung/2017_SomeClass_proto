@@ -11,9 +11,10 @@ import ClassRatingStars from './ClassRatingStars';
 import Tags from './tags';
 import ProgressBar from './progressBar';
 
-class MyFinishedClassesList extends Component{
+class MyClassesListView extends Component{
   constructor(props){
     super(props);
+    console.log(123);
     this.state = {};
   }
   render(){
@@ -36,16 +37,45 @@ class MyFinishedClassesList extends Component{
                       <Text numberOfLines={2} style={styles.className}>
                         {item.title}
                       </Text>
-                      <View style={styles.classRatingWrapper}>
-                        <ClassRatingStars rating_stars={item.my_Rating} />
+                      {this.props.tabLabel=="進行中"&&
                         <View>
-                          <Text style={styles.classRatingNumberWrapper}>
-                            <Text style={styles.classRatingNumber}>
-                              {item.my_Rating==null?'尚未評分':'100%'}
-                            </Text>
+                          <Text numberOfLines={2} style={styles.nextChapter}>
+                            Next Chapter : {item.next_chapters}
                           </Text>
+                          <ProgressBar
+                            ratio={ Number(Math.round(item.finish_chapters/item.total_chapters * 100).toFixed(0))}
+                            fractions={[item.finish_chapters,item.total_chapters]}
+                            showFractions={true}
+                            FontStyle={{fontSize:18,fontWeight:'bold',color:'rgb(90, 187, 214)'}}
+                            ProgressBarWidth={4}
+                            ProgressBarColor={'rgb(90, 187, 214)'}
+                          />
                         </View>
-                      </View>
+                      }
+                      {this.props.tabLabel=="已完成"&&
+                        <View>
+                          <View style={styles.classRatingWrapper}>
+                            <ClassRatingStars
+                              rating_stars={item.my_Rating}
+                            />
+                            <View>
+                              <Text style={styles.classRatingNumberWrapper}>
+                                <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      }
+                      {this.props.tabLabel=="願望清單"&&
+                        <View>
+                          <View style={styles.classRatingWrapper}>
+                            <ClassRatingStars
+                              rating_stars={item.rating_stars}
+                              Number_of_ratings={item.Number_of_ratings}
+                            />
+                          </View>
+                        </View>
+                      }
                     </View>
                   </TouchableOpacity>
                   <View style={{marginLeft: 12}}>
@@ -87,22 +117,6 @@ const styles = {
     flex: 1,
     justifyContent: 'center',
   },
-  classRatingWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  classRatingNumber: {
-    color: 'rgb(90, 187, 214)',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  classRatingNumberWrapper: {
-    color: 'rgb(90, 187, 214)',
-    /*color: 'rgb(206, 206, 206)',*/
-    fontSize: 12,
-    marginRight: 10,
-  },
   className: {
     lineHeight: 20,
   },
@@ -113,4 +127,4 @@ const styles = {
   },
 }
 
-export default MyFinishedClassesList;
+export default MyClassesListView;

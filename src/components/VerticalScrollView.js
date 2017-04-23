@@ -40,19 +40,13 @@ class VerticalScrollView extends Component{
                     <Text numberOfLines={2} style={{lineHeight: 20}}>
                       {item.title}
                     </Text>
-                    <View style={styles.classRatingWrapper}>
-                    {this.props.showRatingStars &&
-                      <ClassRatingStars rating_stars={item.rating_stars} />
+                    {this.props.showRating &&
+                      <ClassRatingStars
+                        rating_stars={item.rating_stars}
+                        Number_of_ratings={item.Number_of_ratings}
+                        showSmallRatingStar={this.props.showSmallRatingStar}
+                      />
                     }
-                    {this.props.showRatingNumber &&
-                      <View>
-                        <Text style={styles.classRatingNumberWrapper}>
-                          <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
-
-                        </Text>
-                      </View>
-                    }
-                    </View>
                     {this.props.showTags &&
                       <Tags tags={item.tags} />
                     }
@@ -91,12 +85,6 @@ const styles = {
     height: 113,
     flex: 1,
     justifyContent: 'center',
-  },
-  classRatingWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    overflow: 'hidden',
   },
 }
 
