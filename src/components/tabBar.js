@@ -8,7 +8,6 @@ import {
 //BrowsePageNavigator被包裝成 stackNavigator
 import { BrowsePageNavigator } from './../Router.js';
 import { CategoryPageNavigator } from './../Router.js';
-import CameraPage from './CameraPage';
 //ChannelsPage
 import ChannelsPage from './ChannelsPage';
 
@@ -65,7 +64,7 @@ class TabBar extends Component{
             });
           }}
         >
-          <CameraPage />
+          {<View></View>}
         </TabBarIOS.Item>
         <TabBarIOS.Item
           icon={require('./../img/btnVedio_normal.png')}

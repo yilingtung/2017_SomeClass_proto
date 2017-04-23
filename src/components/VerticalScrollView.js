@@ -24,7 +24,7 @@ class VerticalScrollView extends Component{
         <View>
         <View style={styles.cardList}>
           {
-            this.props.itemList.map((item) => {
+            this.props.itemList != undefined && this.props.itemList.map((item) => {
             return(
               <View key={item.title}>
                 <TouchableOpacity

@@ -10,9 +10,11 @@ import promoteGame from './../json/promoteGame';
 
 class CategoryPage extends Component {
   constructor(props){
+    var firstCat,secondCat,thirdCat;
     super(props);
     this.state = {
-      promoteGame: promoteGame
+      promoteGame: [],
+      gameList: null
     };
     if(this.props.navigation.state.params == undefined){
       this.state.category = category;
@@ -23,6 +25,30 @@ class CategoryPage extends Component {
       this.state.category = this.props.navigation.state.params.subCategory;
       this.state.mainCat = this.props.navigation.state.params.mainCat;
       this.state.recordCat = this.props.navigation.state.params.recordCat;
+      var recordCatArray = this.state.recordCat.split(" > ");
+      firstCat = recordCatArray[0];
+      secondCat = recordCatArray[1];
+      thirdCat = recordCatArray[2];
+    }
+    if(firstCat != undefined || secondCat != undefined || thirdCat != undefined ){
+      promoteGame.forEach((game)=>{
+        //標籤的對照
+        if(game.tags[0] == firstCat && secondCat == undefined && thirdCat == undefined){
+          //只有一個標籤
+          this.state.promoteGame.push(game);
+        }
+        else if(game.tags[0] == firstCat && game.tags[1] == secondCat && thirdCat == undefined){
+          //有兩個標籤
+          this.state.promoteGame.push(game);
+        }
+        else if(game.tags[0] == firstCat && game.tags[1] == secondCat && game.tags[2] == thirdCat){
+          //有三個標籤
+          this.state.promoteGame.push(game);
+        }
+      })
+    }
+    else {
+      this.state.promoteGame = promoteGame;
     }
   }
   componentDidMount(){
@@ -38,6 +64,7 @@ class CategoryPage extends Component {
     return(
       <View style={styles.container}>
         <ScrollView
+          style={{height: 30}}
           contentInset={{left: 80}}
           contentOffset={{x: -80}}
           centerContent
@@ -62,7 +89,7 @@ class CategoryPage extends Component {
                     this.goToOneSpliteCategoryPage(cat);
                   }}
                 >
-                  <Text>{ cat.title }</Text>
+                  <Text style={{height: 20}}>{ cat.title }</Text>
                 </TouchableOpacity>
               )
             })}
@@ -70,7 +97,7 @@ class CategoryPage extends Component {
           </View>
         </ScrollView>
         <Line />
-        <ScrollView style={{}}>
+        <ScrollView style={{height: Style.DEVICE_HEIGHT - 94 - 49}}>
           <VerticalScrollView
             title={""}
             width={150}
@@ -85,21 +112,19 @@ class CategoryPage extends Component {
 
 const styles = {
   container: {
-    flex: 1,
     backgroundColor: '#fff'
   },
   filterContainer: {
     flexDirection: 'row',
-    flex: 1,
     paddingRight: 10,
     paddingLeft: 10,
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 5,
+    height: 30
   },
   filterItem: {
-    flex: 1,
-    marginLeft: 5,
-    marginRight: 5,
+    marginLeft: 10,
+    marginRight: 10,
     height: 20,
     alignItems: 'center',
   }

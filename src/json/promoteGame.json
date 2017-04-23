@@ -1,35 +1,39 @@
 [
    {
-      "title": "League of Legends 2",
-      "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgLeagueoflegends_3x_cef6sq.png",
-      "descriptions": "2012年上市，2015年，2016年。",
+      "title": "C 語言入門特訓",
+      "thumbnail_image": "https://hahow.in/images/58677f12f108e00800c25f52",
+      "descriptions": "25單元，看影片就能掌握精髓，使用C語言經典教材，從零紮根程式設計。",
       "rating_stars": 3,
-      "tags":[ "程式", "JavaScript" ],
-      "Number_of_ratings": 246
+      "tags":[ "程式", "C/C++" ],
+      "Number_of_ratings": 246,
+      "total_chapters": 8
    },
    {
-      "title": "CS 1.6 2",
-      "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgCounterstrike_3x_loicoc.png",
-      "descriptions": "全球",
+      "title": "靈魂的代言人-塔羅牌義全解析",
+      "thumbnail_image": "https://hahow.in/images/587df6616ecf3a0700b774a5",
+      "descriptions": "塔羅已盛行多時，隨著時代的進步下，塔羅不再那麼神秘，每一個人都可以替自己的人生下決定，但當你需要建議時，該怎麼辦呢？塔羅，將陪伴你找尋真實的自己並給予最真誠的建議......",
       "rating_stars": 1,
-      "tags":[ "料理", "蛋糕" ],
-      "Number_of_ratings": 29
+      "tags":[ "生活", "星象" ],
+      "Number_of_ratings": 29,
+      "total_chapters": 12
    },
    {
-      "title": "H1Z1",
-      "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgH1Z1_3x_hjj2qy.png",
-      "descriptions": "城市遭到攻擊",
+      "title": "Python Web 程式設計入門實戰",
+      "thumbnail_image": "https://hahow.in/images/5867790cf108e00800c25f19",
+      "descriptions": "Python 是世界上最受歡迎的程式語言之一，本課程將帶領學員入門 Python Web 開發實戰，打造屬於你自己的網路應用程式",
       "rating_stars": 5,
-      "tags":[ "設計", "網頁設計", "UX" ],
-      "Number_of_ratings": 1
+      "tags":[ "程式", "Python", "Web" ],
+      "Number_of_ratings": 1,
+      "total_chapters": 9
    },
    {
-      "title": "Hearts Stone",
-      "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886605/imgHearthstone_3x_rebqar.png",
-      "descriptions": "爐石之心",
+      "title": "必學6堂課|攝影剪輯 MV,微電影,超容易！",
+      "thumbnail_image": "https://hahow.in/images/58666eeff108e00800c25a51",
+      "descriptions": "想學剪輯攝影? 想自己製作MV?還是想當個Youtuber? 6堂課教會你！自編、自導、自演、自剪，影片製作不再靠別人！",
       "rating_stars": 2,
-      "tags":[ "程式", "Python" ],
+      "tags":[ "設計", "影像製作" ],
       "Number_of_ratings": 12,
+      "total_chapters": 8,
       "videoList": [
         {
           "title": "黑岩台，最難的 對決",
@@ -42,19 +46,66 @@
       ]
    },
    {
-      "title": "Dota 2",
-      "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDota2_3x_libh6j.png",
-      "descriptions": "鬥塔",
+      "title": "App Inventor 2 入門特訓",
+      "thumbnail_image": "https://hahow.in/images/586d9c92f108e00800c28464",
+      "descriptions": "25個錄影教學單元，使用拼圖來建構程式，就算完全沒有接觸過程式，也能開發出有趣的Android APP。",
       "rating_stars": 3,
-      "tags":[ "C", "C++", "Java" ],
-      "Number_of_ratings": 26
+      "tags":[ "程式", "更多", "APP" ],
+      "Number_of_ratings": 26,
+      "total_chapters": 12
    },
    {
-      "title": "Destiny",
-      "thumbnail_image": "https://res.cloudinary.com/willischou/image/upload/v1491886604/imgDestiny_3x_aeqzvg.png",
-      "descriptions": "命運",
+      "title": "藝用解剖學1 - 達文西維特魯威人",
+      "thumbnail_image": "https://hahow.in/images/58f0d5154909c907004abc84",
+      "descriptions": "在描繪人物時，是否總覺得看起來怪怪的，像外星人不像地球人?　不是你／妳沒有繪畫的天份，而是因為對全身骨骼肌肉的比例分佈位置不理解。快來學習藝用解剖學，跨出畫出準確人物的第一步！",
       "rating_stars": 3,
-      "tags":[ "jQuery", "CSS", "Sass" ],
-      "Number_of_ratings": 2
+      "tags":[ "設計", "素描", "文藝復興" ],
+      "Number_of_ratings": 2,
+      "total_chapters": 5
+   },
+   {
+      "title": "吉他從零開始-Fingerstyle（進階）",
+      "thumbnail_image": "https://hahow.in/images/5865e927f108e00800c25572",
+      "descriptions": "你知道木吉他其實身兼吉他、貝斯、還有鼓三種功夫於一身嗎?想學會解放木吉他最大潛能的 Fingerstyle 嗎?押尾光太郎、Andy Mckee、Mike Daws是你憧憬的目標嗎?現在就脫初級，跟著我一起挑戰更精深的 Fingerstyle世界吧!",
+      "rating_stars": 4,
+      "tags":[ "音樂", "吉他", "Fingerstyle" ],
+      "Number_of_ratings": 2,
+      "total_chapters": 7
+   },
+   {
+      "title": "設計思考，頂尖企業都在學的創新流程！",
+      "thumbnail_image": "https://hahow.in/images/586e59e7a8aae907000cdafe",
+      "descriptions": "第一個專為線上學習開設的全中文設計思考課，透過紮實步驟引導，讓你在體驗經濟的時代學會用「以人為本」的方式解決問題↵創造更多具有價值的產品與服務。",
+      "rating_stars": 4,
+      "tags":[ "設計", "產業創意" ],
+      "Number_of_ratings": 2,
+      "total_chapters": 18
+   },
+   {
+      "title": "隨時隨地玩音樂 GarageBand",
+      "thumbnail_image": "https://hahow.in/images/5854d522f528320700f8acb0",
+      "descriptions": "想要創作求婚影片的配樂，寫首動人的情歌送給心愛的另一半？又或是製作專屬的手機鈴聲卻不知從何下手？在這裡你將得到解答！↵就算不懂樂器、沒有樂理基礎，都不用擔心，這門課將從零開始，從觀念解析到實戰操作，只要發揮你的想像力，動動手指頭就可以輕鬆完成一首曲子喔！",
+      "rating_stars": 2,
+      "tags":[ "音樂", "吉他" ],
+      "Number_of_ratings": 2,
+      "total_chapters": 12
+   },
+   {
+      "title": "Node.js 網站開發 with  React.js",
+      "thumbnail_image": "https://hahow.in/images/58254e5c5910c807008267d9",
+      "descriptions": "前幾堂課將會個別介紹Node.js核心模組之特性，並且講述相關Node.js框架，最後使用Node.js開發一個論壇類型網站，課程將會使用React.js作為前端Framework↵↵課程後面幾堂課會提到有關web cache方面，安全方面，load balance等議題↵↵最後會講解上架到AWS 的EC2上，使用nginx 當reverse proxy 並配置https的步驟",
+      "rating_stars": 5,
+      "tags":[ "程式", "JavaScript", "Web" ],
+      "Number_of_ratings": 2,
+      "total_chapters": 12
+   },
+   {
+      "title": "怪獸工場-基礎角色造型篇",
+      "thumbnail_image": "https://hahow.in/images/57dd26f0d5766a0700c6be3b",
+      "descriptions": "給基礎程度的你，輕鬆由手繪入門轉電繪！↵本課程以基本觀念切入，以循序漸進的繪畫流程帶你掌握繪畫的構成及訣竅。讓入門者也可以體驗到繪畫創作的樂趣。",
+      "rating_stars": 3,
+      "tags":[ "設計", "電腦繪圖" ],
+      "Number_of_ratings": 2,
+      "total_chapters": 8
    }
 ]

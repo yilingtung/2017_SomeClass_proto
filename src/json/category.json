@@ -5,7 +5,7 @@
   },
   {
     "title": "程式",
-    "subCategory": [{"title": "JavaScript"}, {"title": "PHP"}, {"title": "C/C++"}, {"title": "C#"}, {"title": "Objective-C"}, {"title": "Python"}]
+    "subCategory": [{"title": "JavaScript"}, {"title": "PHP"}, {"title": "C/C++"}, {"title": "C#"}, {"title": "Objective-C"}, {"title": "Python"}, {"title": "更多"}]
   },
   {
     "title": "語言",
@@ -17,7 +17,11 @@
   },
   {
     "title": "設計",
-    "subCategory": [{"title": "平面設計"}, {"title": "水彩"}, {"title": "素描"}, {"title": "網頁設計"}, {"title": "服裝設計"}]
+    "subCategory": [{"title": "平面設計"}, {"title": "水彩"}, {"title": "素描"}, {"title": "網頁設計"}, {"title": "電腦繪圖"}, {"title": "影像製作"}, {"title": "產業創意"}]
+  },
+  {
+    "title": "生活",
+    "subCategory": [{"title": "園藝"}, {"title": "哲學"}, {"title": "星象"}, {"title": "社會"}]
   }
 
 ]
