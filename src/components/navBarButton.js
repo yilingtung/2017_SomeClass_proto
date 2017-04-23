@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 class NavBarBackButton extends Component{
+  //showingText : 顯示文字代替圖片。
   render(){
     return(
       <TouchableOpacity
@@ -11,7 +12,7 @@ class NavBarBackButton extends Component{
           this._reactInternalInstance._currentElement._owner._currentElement.props.navigation.goBack();
         }}
       >
-        <Image style={styles.headerIcon} source={require('./../img/btnBack.png')} />
+        {this.props.showingText?<Text style={styles.touchableOpacityText}>{this.props.showingText}</Text>:<Image style={styles.headerIcon} source={require('./../img/btnBack.png')} />}
       </TouchableOpacity>
     );
   };
@@ -35,7 +36,6 @@ class NavBarLikeButton extends Component{
 
 const styles = {
   header: {
-    backgroundColor: 'rgb(90, 187, 214)',
     flexDirection: 'row',
     justifyContent: 'center',
     paddingLeft:8.5,
@@ -46,6 +46,9 @@ const styles = {
     width: 33,
     height: 33
   },
+  touchableOpacityText: {
+    color: '#fff'
+  }
 }
 
 export { NavBarBackButton, NavBarLikeButton };

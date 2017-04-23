@@ -55,9 +55,11 @@ class CategoryPage extends Component {
 
   }
   goToOneSpliteCategoryPage(category){
+    //前往分類頁面，並且帶著下一次篩選的參數
     this.props.navigation.navigate('CategoryPage', {...category});
   }
   goToClassDetailPage = (game)=>{
+    //前往詳細的頁面，並且帶著資料參數
     this.props.navigation.navigate('ClassDetailPage', {...game});
   }
   render(){

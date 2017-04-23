@@ -5,7 +5,9 @@ import BrowsePage from './components/BrowsePage';
 import ClassDetailPage from './components/ClassDetailPage';
 //分類
 import CategoryPage from './components/CategoryPage';
-import SearchBar, { SearchBarButton } from './components/searchBar';
+import { SearchBar, SearchBarButton } from './components/searchBar';
+//搜尋
+import SearchPage from './components/SearchPage';
 //最上面導覽列的特殊元件
 import { NavBarBackButton, NavBarLikeButton } from './components/navBarButton';
 
@@ -17,7 +19,7 @@ export const BrowsePageNavigator = StackNavigator({
         title:'首頁',
         titleStyle: styles.navBarTitle,
         right: (
-          <SearchBarButton onPress={()=>{this.searchBar.searchGames()}}/>
+          <SearchBarButton />
         ),
         style: styles.navBar
       })
@@ -34,6 +36,24 @@ export const BrowsePageNavigator = StackNavigator({
           <NavBarLikeButton />
         ),
         title: (state.params.title),
+        titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
+  },
+  SearchPage: {
+    screen: SearchPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        left: (
+          null
+        ),
+        title: (
+          <SearchBar ref={(searchBar)=>(state.searchBar = searchBar)}/>
+        ),
+        right: (
+          <NavBarBackButton showingText="取消" />
+        ),
         titleStyle: styles.navBarTitle,
         style: styles.navBar
       })

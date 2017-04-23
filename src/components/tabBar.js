@@ -8,8 +8,6 @@ import {
 //BrowsePageNavigator被包裝成 stackNavigator
 import { BrowsePageNavigator } from './../Router.js';
 import { CategoryPageNavigator } from './../Router.js';
-//ChannelsPage
-import ChannelsPage from './ChannelsPage';
 
 class TabBar extends Component{
   constructor(props){

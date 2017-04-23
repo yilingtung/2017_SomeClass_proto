@@ -24,7 +24,7 @@ class ClassDetailPage extends Component{
         <View style={{flex: 1}}>
           <Image style={styles.cardImg} source={{uri: this.state.thumbnail_image}} />
           <Text style={styles.title}>{this.state.title}</Text>
-          <Text style={styles.descriptions}>{this.state.descriptions}</Text>
+          <Text style={styles.descriptions}>{this.state.descriptions.replace(/↵/g,"\n")}</Text>
           {this.state.videoList == null ? null : this.state.videoList.map((video)=>(
             <View style={{height: 200, flex:1}} key={video.title}>
               <WebView
