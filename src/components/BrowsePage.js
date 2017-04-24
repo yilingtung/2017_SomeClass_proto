@@ -8,13 +8,18 @@ import HorizontalScrollView from './HorizontalScrollView';
 import VerticalScrollView from './VerticalScrollView';
 //Games JSON Data
 import promoteGame from './../json/promoteGame';
+import dailyRecommend from './../json/dailyRecommend';
+import fiveMinutesLearning from './../json/fiveMinutesLearning';
+import youMayNotLikeIt from './../json/youMayNotLikeIt';
 
 class BrowsePage extends Component{
   constructor(props){
     super(props);
-    console.log(1);
     this.state = {
-      promoteGame: promoteGame
+      promoteGame: promoteGame,
+      dailyRecommend: dailyRecommend,
+      fiveMinutesLearning: fiveMinutesLearning,
+      youMayNotLikeIt: youMayNotLikeIt
     };
   }
   goToClassDetailPage = (game)=>{
@@ -35,7 +40,7 @@ class BrowsePage extends Component{
             showRating={true}
             showTags={true}
             goToClassDetailPage={this.goToClassDetailPage}
-            itemList={this.state.promoteGame}
+            itemList={this.state.dailyRecommend}
           />
           <Line width={4}/>
           <HorizontalScrollView
@@ -47,7 +52,7 @@ class BrowsePage extends Component{
             showRating={true}
             showSmallRatingStar={true}
             goToClassDetailPage={this.goToClassDetailPage}
-            itemList={this.state.promoteGame}
+            itemList={this.state.fiveMinutesLearning}
           />
           <Line width={4}/>
           <HorizontalScrollView
@@ -56,7 +61,7 @@ class BrowsePage extends Component{
             height={120}
             classNameOneLine={true}
             goToClassDetailPage={this.goToClassDetailPage}
-            itemList={this.state.promoteGame}
+            itemList={this.state.youMayNotLikeIt}
           />
           <Line width={4}/>
           <VerticalScrollView

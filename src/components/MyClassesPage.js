@@ -47,8 +47,8 @@ class MyClassesPage extends Component{
     var _myFinishedClassesData = [];
     promoteGame.forEach((game)=>{
       this.state.userInfo.finished_Courses.forEach((course)=>{
-        if(game.title == course){
-          _myFinishedClassesData.push(game);
+        if(game.title == course.title){
+          _myFinishedClassesData.push(Object.assign(game, course));
         }
       });
     });

@@ -58,11 +58,6 @@ class MyClassesListView extends Component{
                             <ClassRatingStars
                               rating_stars={item.my_Rating}
                             />
-                            <View>
-                              <Text style={styles.classRatingNumberWrapper}>
-                                <Text style={styles.classRatingNumber}>{item.Number_of_ratings} </Text>
-                              </Text>
-                            </View>
                           </View>
                         </View>
                       }

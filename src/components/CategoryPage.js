@@ -66,7 +66,6 @@ class CategoryPage extends Component {
     return(
       <View style={styles.container}>
         <ScrollView
-          style={{height: 30}}
           contentInset={{left: 80}}
           contentOffset={{x: -80}}
           centerContent

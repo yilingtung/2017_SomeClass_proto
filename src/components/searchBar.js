@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 //Games JSON Data
 import promoteGame from './../json/promoteGame';
+import Style from './style.js';
 
 class SearchBar extends Component{
   //搜尋的功能元件
@@ -46,7 +47,6 @@ class SearchBar extends Component{
   }
   render(){
     return(
-      <View>
         <View style={styles.searchBar}>
           <Image style={styles.searchIcon} source={require('./../img/iconSearch.png')}/>
           <TextInput
@@ -55,7 +55,6 @@ class SearchBar extends Component{
             value={this.state.searchText}
           />
         </View>
-      </View>
     )
   }
 }
@@ -82,19 +81,21 @@ class SearchBarButton extends Component{
 
 const styles = {
   searchBar: {
-    height: 30 ,
-    width: 300,
-    marginLeft: -20,
+    height: 20 ,
+    flex: 1,
+    marginLeft: - Style.DEVICE_WIDTH * 0.1,
     flexDirection: 'row',
     backgroundColor: '#fff',
     borderRadius: 5,
-    paddingLeft: 8.5
+    paddingLeft: 8.5,
+    marginTop: 7,
+    marginBottom: 7
   },
   searchBarText: {
-    height: 30,
+    height: 20,
     color: 'rgb(90, 187, 214)',
     fontSize: 15,
-    width: 200,
+    flex: 1,
     alignSelf: 'center'
   },
   searchIcon:{

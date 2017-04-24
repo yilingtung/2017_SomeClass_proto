@@ -67,7 +67,8 @@ const styles = {
     height: 33
   },
   touchableOpacityText: {
-    color: '#fff'
+    color: '#fff',
+    marginRight:10
   }
 }
 
