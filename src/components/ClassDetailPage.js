@@ -18,14 +18,7 @@ class ClassDetailPage extends Component{
       rating_stars,
       Number_of_ratings,
       rating,
-      instructor_name,
-      instructor_photo,
-      instructor_descriptions,
-      instructor_rating,
-      instructor_students,
-      instructor_courses,
-      instructor_title,
-      instructor_comments,
+      instructor,
     } = this.props.navigation.state.params;
     this.state = {
       title: title,
@@ -35,14 +28,7 @@ class ClassDetailPage extends Component{
       rating_stars: rating_stars,
       Number_of_ratings: Number_of_ratings,
       rating:rating,
-      instructor_name:instructor_name,
-      instructor_photo:instructor_photo,
-      instructor_descriptions:instructor_descriptions,
-      instructor_rating:instructor_rating,
-      instructor_students:instructor_students,
-      instructor_courses:instructor_courses,
-      instructor_title:instructor_title,
-      instructor_comments:instructor_comments,
+      instructor:instructor,
     }
   }
   render(){
@@ -79,7 +65,7 @@ class ClassDetailPage extends Component{
             >
               <View style={[styles.subTabViewWrapper,{paddingHorizontal: 20}]}>
                 <Text style={styles.descriptions}>
-                 {this.state.descriptions}
+                 {this.state.descriptions.replace(/↵/g,"\n")}
                 </Text>
               </View>
             </View>
@@ -191,17 +177,17 @@ class ClassDetailPage extends Component{
                 </View>
                 <View>
                   <View style={{alignItems:'center',marginVertical:5}}>
-                    <Image style={styles.instructorImage} source={{uri: this.state.instructor_photo}} />
+                    <Image style={styles.instructorImage} source={{uri: this.state.instructor.instructor_photo}} />
                     <Text style={[styles.descriptions,{fontWeight:'bold'}]}>
-                     {this.state.instructor_name}
+                     {this.state.instructor.instructor_name}
                     </Text>
                     <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>
-                     {this.state.instructor_title}
+                     {this.state.instructor.instructor_title}
                     </Text>
                     <View style={{width:100}}>
                       <View style={{alignItems:'center',marginVertical:5}}>
                         <ClassRatingStars
-                          rating_stars={this.state.instructor_rating}
+                          rating_stars={this.state.instructor.instructor_rating}
                           showSmallRatingStar={true}
                           smallTextStyle={{fontSize: 28,color: 'rgba(0,0,0,0.7)'}}
                         />
@@ -212,7 +198,7 @@ class ClassDetailPage extends Component{
                 <View style={{flexDirection:"row", marginHorizontal: 12, marginVertical:5}}>
                   <View style={styles.descriptionsBox}>
                     <View>
-                      <Text style={styles.descriptionsBoxText}>{this.state.instructor_students}</Text>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor.instructor_students}</Text>
                     </View>
                     <View>
                       <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Students</Text>
@@ -220,7 +206,7 @@ class ClassDetailPage extends Component{
                   </View>
                   <View style={styles.descriptionsBox}>
                     <View>
-                      <Text style={styles.descriptionsBoxText}>{this.state.instructor_courses}</Text>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor.instructor_courses}</Text>
                     </View>
                     <View>
                       <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Courses</Text>
@@ -228,7 +214,7 @@ class ClassDetailPage extends Component{
                   </View>
                   <View style={styles.descriptionsBox}>
                     <View>
-                      <Text style={styles.descriptionsBoxText}>{this.state.instructor_comments}</Text>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor.instructor_comments}</Text>
                     </View>
                     <View>
                       <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Comments</Text>
@@ -237,7 +223,7 @@ class ClassDetailPage extends Component{
                 </View>
                 <View style={{marginVertical:10}}>
                   <Text style={styles.descriptions}>
-                   {this.state.instructor_descriptions}
+                   {this.state.instructor.instructor_descriptions}
                   </Text>
                 </View>
               </View>

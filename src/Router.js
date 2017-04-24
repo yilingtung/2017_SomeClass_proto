@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  View,
+  Image,
+  TouchableOpacity
+} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import BrowsePage from './components/BrowsePage';
 import ClassDetailPage from './components/ClassDetailPage';
@@ -50,9 +55,6 @@ export const MyClassesPageNavigator = StackNavigator({
       header: ({state}) => ({
         title:'我的課程',
         titleStyle: styles.navBarTitle,
-        right: (
-          <SearchBarButton onPress={()=>{this.searchBar.searchGames()}}/>
-        ),
         style: styles.navBar
       })
     }
@@ -84,8 +86,15 @@ export const MyPersonalPageNavigator = StackNavigator({
       header: ({state}) => ({
         title:'自己',
         titleStyle: styles.navBarTitle,
+        left: (
+          <TouchableOpacity>
+            <Image style={styles.headerIcon} source={require('./img/btnNotification.png')} />
+          </TouchableOpacity>
+        ),
         right: (
-          <SearchBarButton onPress={()=>{this.searchBar.searchGames()}}/>
+          <TouchableOpacity>
+            <Image style={styles.headerIcon} source={require('./img/btnSetting.png')} />
+          </TouchableOpacity>
         ),
         style: styles.navBar
       })
@@ -118,5 +127,10 @@ const styles = {
   },
   navBarTitle: {
     color: 'rgb(255,255,255)'
-  }
+  },
+  headerIcon: {
+    width: 33,
+    height: 33,
+    marginHorizontal: 10,
+  },
 };

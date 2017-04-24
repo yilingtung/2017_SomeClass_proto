@@ -12,26 +12,25 @@ class ButtonOpenCourse extends Component{
   }
   render(){
     return(
-      <TouchableOpacity>
+      <View>
         <View style={styles.openCourseView}>
           <Image source={require('./../img/btnAdd_orange.png')} />
           <Text numberOfLines={2} style={styles.openCourseText}>熊課啦</Text>
         </View>
-      </TouchableOpacity>
+      </View>
     )
   }
 }
 
 const styles = {
   openCourseView:{
+    backgroundColor: '#fff',
     flexDirection: 'row',
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    flex: 1,
     marginHorizontal: 12,
-    height: 80,
-    borderRadius: 5,
-    backgroundColor: 'rgba(255, 255, 255, 1)',
+    marginVertical: 12,
   },
   openCourseText: {
     marginVertical: 10,

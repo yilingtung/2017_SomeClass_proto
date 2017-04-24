@@ -9,6 +9,7 @@ import {
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import Line from './line';
 import Button from './button';
+import NoDataView from './noDataView';
 import ButtonOpenCourse from './buttonOpenCourse';
 import HorizontalScrollView from './HorizontalScrollView';
 import VerticalScrollView from './VerticalScrollView';
@@ -109,8 +110,9 @@ class MyPersonalPage extends Component{
                 this.state.userOpenCoursesList == 0 ?
                   <View>
                     <ButtonOpenCourse />
-                    <View style={{alignItems: 'center',marginVertical:10}}>
-                      <Text style={{color: '#B5B5B5'}}>快來分享你的信念吧</Text>
+                    <View style={{alignItems: 'center',marginVertical:0}}>
+                      <Text style={{color: '#B5B5B5',marginVertical:5}}>還沒開設課程</Text>
+                      <Text style={{color: '#B5B5B5',marginVertical:5}}>快和大家分享你的信念吧</Text>
                     </View>
                   </View>
                 :
@@ -132,7 +134,8 @@ class MyPersonalPage extends Component{
               {
                 this.state.userWatchedClassList == 0 ?
                   <View>
-                    <View style={{alignItems: 'center',marginVertical:10}}>
+                    <NoDataView />
+                    <View style={{alignItems: 'center',marginVertical:0}}>
                       <Text style={{color: '#B5B5B5'}}>還沒看過任何課程</Text>
                     </View>
                   </View>
