@@ -3,6 +3,7 @@ import { View, Text, Image, WebView, ScrollView } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import ClassRatingStars from './ClassRatingStars';
 import Line from './line';
+import RatingView from './RatingView';
 import Style from './style.js';
 
 class ClassDetailPage extends Component{
@@ -15,6 +16,15 @@ class ClassDetailPage extends Component{
       videoList,
       rating_stars,
       Number_of_ratings,
+      rating,
+      instructor_name,
+      instructor_photo,
+      instructor_descriptions,
+      instructor_rating,
+      instructor_students,
+      instructor_courses,
+      instructor_title,
+      instructor_comments,
     } = this.props.navigation.state.params;
     this.state = {
       title: title,
@@ -23,6 +33,15 @@ class ClassDetailPage extends Component{
       videoList: videoList,
       rating_stars: rating_stars,
       Number_of_ratings: Number_of_ratings,
+      rating:rating,
+      instructor_name:instructor_name,
+      instructor_photo:instructor_photo,
+      instructor_descriptions:instructor_descriptions,
+      instructor_rating:instructor_rating,
+      instructor_students:instructor_students,
+      instructor_courses:instructor_courses,
+      instructor_title:instructor_title,
+      instructor_comments:instructor_comments,
     }
   }
   render(){
@@ -129,11 +148,97 @@ class ClassDetailPage extends Component{
             </View>
             <View
               tabLabel="評價"
+              style={{paddingVertical: 8}}
             >
+              <View style={[styles.subTabViewWrapper,{paddingHorizontal: 20}]}>
+                <View style={{alignItems: 'center',}}>
+                  <Text style={styles.ratinNumber}>
+                   {this.state.rating_stars}
+                  </Text>
+                  <ClassRatingStars
+                    rating_stars={this.state.rating_stars}
+                    Number_of_ratings={this.state.Number_of_ratings}
+                  />
+                </View>
+                <Text style={{fontWeight:'normal',color:'rgba(0,0,0,0.7)',marginVertical:10}}>
+                評論 ({this.state.rating.length})
+                </Text>
+                {
+                  this.state.rating.length == 0 ?
+                  <View style={{alignItems: 'center'}}>
+                    <Text style={{color: '#B5B5B5'}}>
+                      還沒有評論
+                    </Text>
+                  </View>
+                  :
+                  this.state.rating.map((item)=>{
+                    return(
+                      <RatingView key={item.rating_id} item={item}/>
+                    )
+                  })
+                }
+              </View>
             </View>
             <View
               tabLabel="更多"
+              style={{paddingVertical: 8}}
             >
+              <View style={[styles.subTabViewWrapper,{paddingHorizontal: 20}]}>
+                <View style={{alignItems:'center',marginBottom:10}}>
+                  <Text style={styles.descriptions}>講者</Text>
+                </View>
+                <View>
+                  <View style={{alignItems:'center',marginVertical:5}}>
+                    <Image style={styles.instructorImage} source={{uri: this.state.instructor_photo}} />
+                    <Text style={[styles.descriptions,{fontWeight:'bold'}]}>
+                     {this.state.instructor_name}
+                    </Text>
+                    <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>
+                     {this.state.instructor_title}
+                    </Text>
+                    <View style={{width:100}}>
+                      <View style={{alignItems:'center',marginVertical:5}}>
+                        <ClassRatingStars
+                          rating_stars={this.state.instructor_rating}
+                          showSmallRatingStar={true}
+                          smallTextStyle={{fontSize: 28,color: 'rgba(0,0,0,0.7)'}}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View style={{flexDirection:"row", marginHorizontal: 12, marginVertical:5}}>
+                  <View style={styles.descriptionsBox}>
+                    <View>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor_students}</Text>
+                    </View>
+                    <View>
+                      <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Students</Text>
+                    </View>
+                  </View>
+                  <View style={styles.descriptionsBox}>
+                    <View>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor_courses}</Text>
+                    </View>
+                    <View>
+                      <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Courses</Text>
+                    </View>
+                  </View>
+                  <View style={styles.descriptionsBox}>
+                    <View>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor_comments}</Text>
+                    </View>
+                    <View>
+                      <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Comments</Text>
+                    </View>
+                  </View>
+                </View>
+                <View style={{marginVertical:10}}>
+                  <Text style={styles.descriptions}>
+                   {this.state.instructor_descriptions}
+                  </Text>
+                </View>
+              </View>
             </View>
           </ScrollableTabView>
         </View>
@@ -207,6 +312,28 @@ const styles = {
   },
   courseName: {
     color: 'rgba(0,0,0,0.7)',
+  },
+  ratinNumber: {
+    fontWeight: 'bold',
+    fontSize: 32,
+    color: 'rgba(0,0,0,0.7)',
+  },
+  instructorImage: {
+    height: 72,
+    width: 72,
+    borderRadius: 36,
+    marginVertical: 10,
+  },
+  descriptionsBox: {
+    alignItems: "center",
+    marginHorizontal: 10,
+    flex: 1,
+  },
+  descriptionsBoxText: {
+    letterSpacing: 1,
+    fontWeight: 'bold',
+    color: 'rgba(0,0,0,0.7)',
+    marginTop: 2,
   },
 }
 

@@ -2,10 +2,42 @@
    {
       "title": "C 語言入門特訓",
       "thumbnail_image": "https://hahow.in/images/58677f12f108e00800c25f52",
+      "instructor_name": "Chen Yan Hua",
+      "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+      "instructor_title": "Data Scientist",
+      "instructor_descriptions": "Jose Marcial Portilla has a BS and MS in Mechanical Engineering from Santa Clara University and years of experience as a professional instructor and trainer for Data Science and programming. He has publications and patents in various fields such as microfluidics, materials science, and data science technologies. Over the course of his career he has developed a skill set in analyzing data and he hopes to use his experience in teaching and data science to help other people learn the power of programming the ability to analyze data, as well as present the data in clear and beautiful visualizations. Currently he works as the Head of Data Science for Pierian Data Inc. and provides in-person data science and python training courses to a variety of companies all over the world, including top banks such as Credit Suisse. Feel free to contact him on LinkedIn for more information on in-person training sessions.",
+      "instructor_rating": "5",
+      "instructor_students": "87",
+      "instructor_courses": "78",
+      "instructor_comments": "222",
       "descriptions": "25單元，看影片就能掌握精髓，使用C語言經典教材，從零紮根程式設計。25單元，看影片就能掌握精髓，使用C語言經典教材，從零紮根程式設計。ASP.NET Web API is a framework for building HTTP services that can be accessed from any client including browsers and mobile devices. It is an ideal platform for building RESTful applications on the .NET Framework. However it can also use to create non RESTful services.",
-      "rating_stars": 3,
+      "rating_stars": 5,
       "tags":[ "程式", "C/C++" ],
       "Number_of_ratings": 246,
+      "rating": [
+        {
+          "rating_id": "1",
+          "userId": "123",
+          "userName": "Steven Lee",
+          "time_stamp": "2017/04/23",
+          "rating": 5,
+          "comment": "He did an amazing clarification of his courses!"
+        },{
+          "rating_id": "2",
+          "userId": "124",
+          "userName": "Winson Lu",
+          "time_stamp": "2016/04/21",
+          "rating": 3,
+          "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+        },{
+          "rating_id": "3",
+          "userId": "124",
+          "userName": "Winson Lu",
+          "time_stamp": "2016/04/21",
+          "rating": 5,
+          "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+        }
+      ],
       "total_chapters": 8,
       "chapters": [
         {
@@ -33,6 +65,7 @@
       "rating_stars": 1,
       "tags":[ "生活", "星象" ],
       "Number_of_ratings": 29,
+      "rating": [],
       "total_chapters": 12
    },
    {
@@ -42,6 +75,7 @@
       "rating_stars": 5,
       "tags":[ "程式", "Python", "Web" ],
       "Number_of_ratings": 1,
+      "rating": [],
       "total_chapters": 9
    },
    {
@@ -51,6 +85,7 @@
       "rating_stars": 2,
       "tags":[ "設計", "影像製作" ],
       "Number_of_ratings": 12,
+      "rating": [],
       "total_chapters": 8,
       "videoList": [
         {
@@ -70,6 +105,7 @@
       "rating_stars": 3,
       "tags":[ "程式", "更多", "APP" ],
       "Number_of_ratings": 26,
+      "rating": [],
       "total_chapters": 12
    },
    {
@@ -79,6 +115,7 @@
       "rating_stars": 3,
       "tags":[ "設計", "素描", "文藝復興" ],
       "Number_of_ratings": 2,
+      "rating": [],
       "total_chapters": 5
    },
    {
@@ -88,6 +125,7 @@
       "rating_stars": 4,
       "tags":[ "音樂", "吉他", "Fingerstyle" ],
       "Number_of_ratings": 2,
+      "rating": [],
       "total_chapters": 7
    },
    {
@@ -97,6 +135,7 @@
       "rating_stars": 4,
       "tags":[ "設計", "產業創意" ],
       "Number_of_ratings": 2,
+      "rating": [],
       "total_chapters": 18
    },
    {
@@ -106,6 +145,7 @@
       "rating_stars": 2,
       "tags":[ "音樂", "吉他" ],
       "Number_of_ratings": 2,
+      "rating": [],
       "total_chapters": 12
    },
    {
@@ -115,6 +155,7 @@
       "rating_stars": 5,
       "tags":[ "程式", "JavaScript", "Web" ],
       "Number_of_ratings": 2,
+      "rating": [],
       "total_chapters": 12
    },
    {
@@ -124,6 +165,7 @@
       "rating_stars": 3,
       "tags":[ "設計", "電腦繪圖" ],
       "Number_of_ratings": 2,
+      "rating": [],
       "total_chapters": 8
    }
 
