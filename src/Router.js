@@ -9,8 +9,10 @@ import MyClassesPage from './components/MyClassesPage';
 import { SearchBar, SearchBarButton } from './components/searchBar';
 //搜尋
 import SearchPage from './components/SearchPage';
+//開課
+import OpenClassPage from './components/OpenClassPage';
 //最上面導覽列的特殊元件
-import { NavBarBackButton, NavBarLikeButton } from './components/navBarButton';
+import { NavBarBackButton, NavBarLikeButton, NavBarShareButton } from './components/navBarButton';
 
 export const BrowsePageNavigator = StackNavigator({
   BrowsePage: {
@@ -124,6 +126,41 @@ export const CategoryPageNavigator = StackNavigator({
           <NavBarLikeButton />
         ),
         title: (state.params.title),
+        titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
+  },
+  SearchPage: {
+    screen: SearchPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        left: (
+          null
+        ),
+        title: (
+          <SearchBar ref={(searchBar)=>(state.searchBar = searchBar)}/>
+        ),
+        right: (
+          <NavBarBackButton showingText="取消" />
+        ),
+        titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
+  }
+},{
+
+});
+
+export const OpenClassPageNavigator = StackNavigator({
+  OpenClassPage: {
+    screen: OpenClassPage,
+    navigationOptions: {
+      header: ({state})=>({
+        left: null,
+        right: <NavBarShareButton />,
+        title: '開課',
         titleStyle: styles.navBarTitle,
         style: styles.navBar
       })

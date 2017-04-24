@@ -34,7 +34,9 @@ class SearchBar extends Component{
       this.state.searchPage.receivepromoteGame(_promoteGame);
     }
     else{
+      //空的搜尋條件，產生使用看過清單＆推薦清單
       this.state.searchPage.generateWatchedList();
+      this.state.searchPage.generateRecomandList();
     }
     this.setState({searchText: input});
   }

@@ -15,26 +15,32 @@ class SearchPage extends Component {
     var _this = this;
     this.state = {
       promoteGame: [],
+      recomandGame: [],
       userSearchHistory: userInfo.userSearchHistory,
-      userWatchedClass: userInfo.userWatchedClass
+      userWatchedClass: userInfo.userWatchedClass,
+      userRecomandList: userInfo.userRecomandList,
+      showingRecomandList: true
     };
     //尚待修正，不是很好的方法。
     setTimeout(()=>{
       this.props.navigation.state.searchBar.bindSearchPage(_this);
     }, 500);
-    //this.props.navigation.state.searchBar.props.searchPage = this;
+
     this.receivepromoteGame = this.receivepromoteGame.bind(this);
     this.generateWatchedList = this.generateWatchedList.bind(this);
+    this.generateRecomandList = this.generateRecomandList.bind(this);
   }
   componentDidMount(){
     //畫出物件後，要自動產生第一次的看過清單
+    this.generateRecomandList();
     this.generateWatchedList();
   }
   receivepromoteGame(promoteGame){
     //接收來至 searchBar.js 的資料
     this.setState({
       promoteGame: promoteGame,
-      verticalScrollViewTitle: '搜尋結果'
+      verticalScrollViewTitle: '搜尋結果',
+      showingRecomandList: false
     });
   }
   generateWatchedList(){
@@ -50,7 +56,26 @@ class SearchPage extends Component {
     this.setState({
       promoteGame: _promoteGame,
       verticalScrollViewTitle: '最近看過'
-    },()=>{console.log('1');});
+    });
+  }
+  generateRecomandList(){
+    var _recomandGame = [];
+    if(this.state.userRecomandList != undefined){
+      this.state.userRecomandList.forEach((title)=>{
+        promoteGame.forEach((game)=>{
+          if(game.title == title){
+            _recomandGame.push(game);
+          }
+        });
+      });
+      this.setState({
+        recomandGame: _recomandGame,
+        showingRecomandList: true
+      });
+    }
+    else {
+      this.setState({showingRecomandList: false})
+    }
   }
   goToClassDetailPage = (game)=>{
     //前往詳細的頁面，並且帶著資料參數
@@ -66,6 +91,14 @@ class SearchPage extends Component {
             goToClassDetailPage={this.goToClassDetailPage}
             itemList={this.state.promoteGame}
           />
+          {this.state.showingRecomandList &&
+            <VerticalScrollView
+              title={'推薦課程'}
+              width={150}
+              goToClassDetailPage={this.goToClassDetailPage}
+              itemList={this.state.recomandGame}
+            />
+          }
         </ScrollView>
       </View>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Share } from 'react-native';
 
 class NavBarBackButton extends Component{
   //showingText : 顯示文字代替圖片。
@@ -16,6 +16,26 @@ class NavBarBackButton extends Component{
       </TouchableOpacity>
     );
   };
+}
+
+class NavBarShareButton extends Component{
+  render(){
+    return(
+      <TouchableOpacity
+        style={styles.header}
+        onPress={()=>{
+          //分享
+          Share.share({
+            message: 'React Native | A framework for building native apps using React'
+          })
+          .then(this._showResult)
+          .catch((error) => this.setState({result: 'error: ' + error.message}));
+        }}
+      >
+        {this.props.showingText?<Text style={styles.touchableOpacityText}>{this.props.showingText}</Text>:<Image style={styles.headerIcon} source={require('./../img/btnShare.png')} />}
+      </TouchableOpacity>
+    );
+  }
 }
 
 class NavBarLikeButton extends Component{
@@ -51,4 +71,4 @@ const styles = {
   }
 }
 
-export { NavBarBackButton, NavBarLikeButton };
+export { NavBarBackButton, NavBarLikeButton, NavBarShareButton };

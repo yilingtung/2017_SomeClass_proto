@@ -10,13 +10,13 @@ import {
 import {
   BrowsePageNavigator,
   MyClassesPageNavigator,
-  CategoryPageNavigator
+  CategoryPageNavigator,
+  OpenClassPageNavigator
 } from './../Router.js';
 
 class TabBar extends Component{
   constructor(props){
     super(props);
-    console.log(123123);
     this.state = {
       selectedTab:'BrowsePage'
     };
@@ -67,7 +67,7 @@ class TabBar extends Component{
             });
           }}
         >
-          {<View></View>}
+          <OpenClassPageNavigator />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           icon={require('./../img/btnVedio_normal.png')}

@@ -15,6 +15,8 @@ class ClassDetailPage extends Component{
       videoList,
       rating_stars,
       Number_of_ratings,
+      total_chapters,
+      chapters
     } = this.props.navigation.state.params;
     this.state = {
       title: title,
@@ -23,7 +25,14 @@ class ClassDetailPage extends Component{
       videoList: videoList,
       rating_stars: rating_stars,
       Number_of_ratings: Number_of_ratings,
+      total_chapters: total_chapters,
+      chapters: chapters
     }
+  }
+  generateChapterList(chapters){
+    chapters.forEach((chapter)=>{
+
+    });
   }
   render(){
     return(
@@ -58,7 +67,7 @@ class ClassDetailPage extends Component{
             >
               <View style={[styles.subTabViewWrapper,{paddingHorizontal: 20}]}>
                 <Text style={styles.descriptions}>
-                 {this.state.descriptions.replace(/↵/g,"\n")}
+                 {this.state.descriptions && this.state.descriptions.replace(/↵/g,"\n")}
                 </Text>
               </View>
             </View>
@@ -68,63 +77,47 @@ class ClassDetailPage extends Component{
             >
               <View style={[styles.subTabViewWrapper,{}]}>
                 <View style={{alignItems:'center',marginBottom:10}}>
-                  <Text style={styles.descriptions}>24 個講座</Text>
+                  <Text style={styles.descriptions}>{this.state.total_chapters}個講座</Text>
                   <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>02:59:46</Text>
                 </View>
                 <View style={{}}>
-                  <View>
-                    <View style={styles.chapterNameView}>
-                      <Text style={styles.chapterName} numberOfLines={1}>Getting Started With HTML</Text>
-                    </View>
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>1.  Intro to Course</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>2.  Get FREE access to the chatroom and get help with questions</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>3.  Installing an IDE</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>4.  Building Your First Website</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>5.  HTML5 page structure with the important Meta Tags</Text>
-                    </View>
-                    <Line />
-                  </View>
-                  <View>
-                    <View style={styles.chapterNameView}>
-                      <Text style={styles.chapterName} numberOfLines={1}>Getting Started With HTML</Text>
-                    </View>
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>1.  Intro to Course</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>2.  Get FREE access to the chatroom and get help with questions</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>3.  Installing an IDE</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>4.  Building Your First Website</Text>
-                    </View>
-                    <Line />
-                    <View style={styles.courseNameView}>
-                      <Text style={styles.courseName} numberOfLines={1}>5.  HTML5 page structure with the important Meta Tags</Text>
-                    </View>
-                    <Line />
-                  </View>
-
+                  {
+                    this.state.chapters != null ? (
+                      <View>
+                      {
+                        this.state.chapters.map((chapter, index)=>{
+                          return(
+                          <View  key={chapter.chapter_title + this.state.title}>
+                            <View style={styles.chapterNameView}>
+                              <Text style={styles.chapterName} numberOfLines={1}>{(index + 1) + " .  " + chapter.chapter_title}</Text>
+                            </View>
+                              {
+                                chapter.courses.map((course, index)=>{
+                                  return(
+                                    <View key={course.course_title + this.state.title}>
+                                      <View style={styles.courseNameView}>
+                                        <Text style={styles.courseName} numberOfLines={1}>{(index + 1) + " .  " + course.course_title}</Text>
+                                      </View>
+                                      <Line />
+                                    </View>
+                                  )
+                                })
+                              }
+                            </View>
+                          )
+                        })
+                      }
+                      </View>
+                    ) : (
+                      <View style={styles.chapterNameView}>
+                        <View style={styles.horizontalWapper}>
+                          <Image resizeMode={'contain'} style={styles.warning_icon} source={require("./../img/warning_icon.png")} />
+                          <Text style={styles.chapterName} numberOfLines={1}>尚未提供</Text>
+                        </View>
+                      </View>
+                    )
+                  }
                 </View>
-
               </View>
             </View>
             <View
@@ -208,6 +201,14 @@ const styles = {
   courseName: {
     color: 'rgba(0,0,0,0.7)',
   },
+  horizontalWapper: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  warning_icon: {
+    width: 20,
+    marginRight: 10
+  }
 }
 
 export default ClassDetailPage;
