@@ -61,7 +61,6 @@ class HorizontalScrollView extends Component{
               })}
             </View>
           </ScrollView>
-          <Line />
         </View>
       </View>
     )

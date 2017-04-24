@@ -9,15 +9,18 @@ class Line extends Component{
   }
   render(){
     return(
-      <View style={styles.line}></View>
+      <View style={[styles.line,
+        this.props.width && {height:this.props.width}
+      ]}>
+      </View>
     )
   }
 }
 
 const styles = {
   line: {
-    height: 1,
-    backgroundColor: 'rgba(189,189,189,.2)',
+    height: 2,
+    backgroundColor: '#F1F4F6',
   },
 }
 

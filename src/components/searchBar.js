@@ -107,7 +107,7 @@ const styles = {
     width: 33,
     height: 33,
     marginRight: 10,
-  }
+  },
 }
 
 export { SearchBar, SearchBarButton };

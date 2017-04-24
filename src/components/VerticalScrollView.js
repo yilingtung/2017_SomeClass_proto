@@ -56,9 +56,9 @@ class VerticalScrollView extends Component{
                   <Line />
                 </View>
               </View>
-            )
-          })}
-        </View>
+              )
+            })}
+          </View>
         </View>
       </View>
     )

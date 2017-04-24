@@ -112,7 +112,7 @@ class OpenClassPage extends Component {
                                 <TextInput value={this.state.courseTitle} onChangeText={(title) => this.setState({courseTitle:title})} style={styles.courseNameInput}  placeholder='新增步驟' />
                               </View>
                               <TouchableOpacity onPress={()=>{null}}>
-                                <Image style={{width: 25, height: 25}} source={require("./../img/btnAdd.png")} />
+                                <Image style={{width: 25, height: 25}} source={require("./../img/btnAdd_orange.png")} />
                               </TouchableOpacity>
                             </View>
                             <Line />
@@ -128,7 +128,7 @@ class OpenClassPage extends Component {
                         <TextInput value={this.state.chapterTitle} onChangeText={(title) => this.setState({chapterTitle:title})} style={styles.chapterNameInput}  placeholder='新增章節' />
                       </View>
                       <TouchableOpacity onPress={()=>{console.log('press');this.addChapter()}}>
-                        <Image style={{width: 25, height: 25}} source={require("./../img/btnAdd.png")} />
+                        <Image style={{width: 25, height: 25}} source={require("./../img/btnAdd_orange.png")} />
                       </TouchableOpacity>
                     </View>
                   </View>

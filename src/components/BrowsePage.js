@@ -26,44 +26,48 @@ class BrowsePage extends Component{
   render(){
     return(
       <ScrollView style={styles.container}>
-        <HorizontalScrollView
-          title={'每日推薦'}
-          width={270}
-          height={120}
-          showViewTitleButton={true}
-          showRating={true}
-          showTags={true}
-          goToClassDetailPage={this.goToClassDetailPage}
-          itemList={this.state.promoteGame}
-        />
-        <HorizontalScrollView
-          title={'五分鐘學習'}
-          width={120}
-          height={120}
-          showViewTitleButton={true}
-          classNameOneLine={true}
-          showRating={true}
-          showSmallRatingStar={true}
-          goToClassDetailPage={this.goToClassDetailPage}
-          itemList={this.state.promoteGame}
-        />
-        <HorizontalScrollView
-          title={'即將推出'}
-          width={120}
-          height={120}
-          classNameOneLine={true}
-          goToClassDetailPage={this.goToClassDetailPage}
-          itemList={this.state.promoteGame}
-        />
-        <VerticalScrollView
-          title={'大家都在看'}
-          width={150}
-          showRating={true}
-          showTags={true}
-          goToClassDetailPage={this.goToClassDetailPage}
-          itemList={this.state.promoteGame}
-        />
-        <Line />
+        <View style={{marginVertical: 8, backgroundColor: '#fff',}}>
+          <HorizontalScrollView
+            title={'每日推薦'}
+            width={270}
+            height={120}
+            showViewTitleButton={true}
+            showRating={true}
+            showTags={true}
+            goToClassDetailPage={this.goToClassDetailPage}
+            itemList={this.state.promoteGame}
+          />
+          <Line width={4}/>
+          <HorizontalScrollView
+            title={'五分鐘學習'}
+            width={120}
+            height={120}
+            showViewTitleButton={true}
+            classNameOneLine={true}
+            showRating={true}
+            showSmallRatingStar={true}
+            goToClassDetailPage={this.goToClassDetailPage}
+            itemList={this.state.promoteGame}
+          />
+          <Line width={4}/>
+          <HorizontalScrollView
+            title={'即將推出'}
+            width={120}
+            height={120}
+            classNameOneLine={true}
+            goToClassDetailPage={this.goToClassDetailPage}
+            itemList={this.state.promoteGame}
+          />
+          <Line width={4}/>
+          <VerticalScrollView
+            title={'大家都在看'}
+            width={150}
+            showRating={true}
+            showTags={true}
+            goToClassDetailPage={this.goToClassDetailPage}
+            itemList={this.state.promoteGame}
+          />
+        </View>
       </ScrollView>
     );
   }
@@ -73,7 +77,7 @@ const styles = {
   container: {
     flex: 1,
     marginTop: -20,
-    backgroundColor: '#fff',
+    backgroundColor: '#F1F4F6',
   },
 }
 

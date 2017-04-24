@@ -11,7 +11,8 @@ import {
   BrowsePageNavigator,
   MyClassesPageNavigator,
   CategoryPageNavigator,
-  OpenClassPageNavigator
+  OpenClassPageNavigator,
+  MyPersonalPageNavigator
 } from './../Router.js';
 
 class TabBar extends Component{
@@ -85,7 +86,7 @@ class TabBar extends Component{
         <TabBarIOS.Item
           icon={require('./../img/btnMyClass_normal.png')}
           selectedIcon={require('./../img/btnMyClass_normal.png')}
-          title="我"
+          title="自己"
           selected={this.state.selectedTab === 'Me'}
           onPress={() => {
             this.setState({
@@ -93,7 +94,7 @@ class TabBar extends Component{
             });
           }}
         >
-          {<View></View>}
+          <MyPersonalPageNavigator />
         </TabBarIOS.Item>
       </TabBarIOS>
     )

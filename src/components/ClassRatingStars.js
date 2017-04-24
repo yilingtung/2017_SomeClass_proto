@@ -31,8 +31,10 @@ class ClassRatingStars extends Component{
       <View>
       {this.props.showSmallRatingStar?
         <View style={{flexDirection:'row',margin:5,justifyContent:'flex-end'}}>
-          <Text style={{color:'rgb(232, 167, 60)',fontSize:16,fontWeight:'bold',marginRight:3}}>{this.props.rating_stars}</Text>
-          <Image key={index} style={styles.star} source={require('./../img/iconStarFull.png')} />
+          <View style={{flexDirection:'row',alignItems:'center'}}>
+            <Text style={[styles.smallText,this.props.smallTextStyle]}>{this.props.rating_stars}</Text>
+            <Image key={index} style={styles.star} source={require('./../img/iconStarFull.png')} />
+          </View>
         </View>
          :
         <View style={styles.classRatingWrapper}>
@@ -75,6 +77,12 @@ const styles = {
     color: 'rgb(206, 206, 206)',
     fontSize: 12,
     marginRight: 10,
+  },
+  smallText: {
+    color: 'rgb(232, 167, 60)',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginRight: 3,
   },
 }
 

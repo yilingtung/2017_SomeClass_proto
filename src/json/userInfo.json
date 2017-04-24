@@ -1,6 +1,9 @@
 {
   "userName": "Adim Li",
   "userAccount": "dsa663838@yahoo.com.tw",
+  "user_title": "Python and GIS Expert, Founder of PythonHow.com",
+  "userPhoto": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492172321/chat/user_14.png",
+  "userBackgroundImage": "https://club.hihonor.com/data/images/2016/4/19/4058b20eef937ccfb44d016d6e29386d.png",
   "userSearchHistory": [
     "Python","設計","App Inventor"
   ],
@@ -9,5 +12,17 @@
   ],
   "userRecomandList": [
     "Python Web 程式設計入門實戰", "Node.js 網站開發 with  React.js"
+  ],
+  "userOpenCourses": [
+
+  ],
+  "students": [
+    "UserName1", "UserName2", "UserName3",
+  ],
+  "comments": [
+    {
+      "userName": "UserName1",
+      "comment": "Good",
+    },
   ]
 }

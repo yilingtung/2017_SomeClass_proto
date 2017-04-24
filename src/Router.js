@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  View,
+  Image,
+  TouchableOpacity
+} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 //首頁
 import BrowsePage from './components/BrowsePage';
@@ -11,6 +16,8 @@ import { SearchBar, SearchBarButton } from './components/searchBar';
 import SearchPage from './components/SearchPage';
 //開課
 import OpenClassPage from './components/OpenClassPage';
+//我
+import MyPersonalPage from './components/MyPersonalPage';
 //最上面導覽列的特殊元件
 import { NavBarBackButton, NavBarLikeButton, NavBarShareButton } from './components/navBarButton';
 
@@ -73,8 +80,46 @@ export const MyClassesPageNavigator = StackNavigator({
       header: ({state}) => ({
         title:'我的課程',
         titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
+  },
+  ClassDetailPage: {
+    screen: ClassDetailPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        left: (
+          <NavBarBackButton />
+        ),
         right: (
-          <SearchBarButton onPress={()=>{this.searchBar.searchGames()}}/>
+          <NavBarLikeButton />
+        ),
+        title: (state.params.title),
+        titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
+  }
+},{
+  headerMode: 'float'
+});
+
+export const MyPersonalPageNavigator = StackNavigator({
+  MyPersonalPage: {
+    screen: MyPersonalPage,
+    navigationOptions: {
+      header: ({state}) => ({
+        title:'自己',
+        titleStyle: styles.navBarTitle,
+        left: (
+          <TouchableOpacity>
+            <Image style={styles.headerIcon} source={require('./img/btnNotification.png')} />
+          </TouchableOpacity>
+        ),
+        right: (
+          <TouchableOpacity>
+            <Image style={styles.headerIcon} source={require('./img/btnSetting.png')} />
+          </TouchableOpacity>
         ),
         style: styles.navBar
       })
@@ -177,5 +222,10 @@ const styles = {
   },
   navBarTitle: {
     color: 'rgb(255,255,255)'
-  }
+  },
+  headerIcon: {
+    width: 33,
+    height: 33,
+    marginHorizontal: 10,
+  },
 };

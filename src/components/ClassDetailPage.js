@@ -3,6 +3,8 @@ import { View, Text, Image, WebView, ScrollView } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import ClassRatingStars from './ClassRatingStars';
 import Line from './line';
+import Button from './button';
+import RatingView from './RatingView';
 import Style from './style.js';
 
 class ClassDetailPage extends Component{
@@ -16,7 +18,9 @@ class ClassDetailPage extends Component{
       rating_stars,
       Number_of_ratings,
       total_chapters,
-      chapters
+      chapters,
+      rating,
+      instructor
     } = this.props.navigation.state.params;
     this.state = {
       title: title,
@@ -26,7 +30,9 @@ class ClassDetailPage extends Component{
       rating_stars: rating_stars,
       Number_of_ratings: Number_of_ratings,
       total_chapters: total_chapters,
-      chapters: chapters
+      chapters: chapters,
+      rating:rating,
+      instructor:instructor
     }
   }
   generateChapterList(chapters){
@@ -47,9 +53,10 @@ class ClassDetailPage extends Component{
               rating_stars={this.state.rating_stars}
               Number_of_ratings={this.state.Number_of_ratings}
             />
-            <View style={styles.joinButton}>
-              <Text style={styles.joinBtnText}>加入此課程</Text>
-            </View>
+            <Button
+              title={"加入此課程"}
+              backgroundColor={'rgb(232, 167, 60)'}
+            />
           </View>
         </View>
         <View>
@@ -122,11 +129,97 @@ class ClassDetailPage extends Component{
             </View>
             <View
               tabLabel="評價"
+              style={{paddingVertical: 8}}
             >
+              <View style={[styles.subTabViewWrapper,{paddingHorizontal: 20}]}>
+                <View style={{alignItems: 'center',}}>
+                  <Text style={styles.ratinNumber}>
+                   {this.state.rating_stars}
+                  </Text>
+                  <ClassRatingStars
+                    rating_stars={this.state.rating_stars}
+                    Number_of_ratings={this.state.Number_of_ratings}
+                  />
+                </View>
+                <Text style={{fontWeight:'normal',color:'rgba(0,0,0,0.7)',marginVertical:10}}>
+                評論 ({this.state.rating.length})
+                </Text>
+                {
+                  this.state.rating.length == 0 ?
+                  <View style={{alignItems: 'center'}}>
+                    <Text style={{color: '#B5B5B5'}}>
+                      還沒有評論
+                    </Text>
+                  </View>
+                  :
+                  this.state.rating.map((item)=>{
+                    return(
+                      <RatingView key={item.rating_id} item={item}/>
+                    )
+                  })
+                }
+              </View>
             </View>
             <View
               tabLabel="更多"
+              style={{paddingVertical: 8}}
             >
+              <View style={[styles.subTabViewWrapper,{paddingHorizontal: 20}]}>
+                <View style={{alignItems:'center',marginBottom:10}}>
+                  <Text style={styles.descriptions}>講者</Text>
+                </View>
+                <View>
+                  <View style={{alignItems:'center',marginVertical:5}}>
+                    <Image style={styles.instructorImage} source={{uri: this.state.instructor.instructor_photo}} />
+                    <Text style={[styles.descriptions,{fontWeight:'bold'}]}>
+                     {this.state.instructor.instructor_name}
+                    </Text>
+                    <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>
+                     {this.state.instructor.instructor_title}
+                    </Text>
+                    <View style={{width:100}}>
+                      <View style={{alignItems:'center',marginVertical:5}}>
+                        <ClassRatingStars
+                          rating_stars={this.state.instructor.instructor_rating}
+                          showSmallRatingStar={true}
+                          smallTextStyle={{fontSize: 28,color: 'rgba(0,0,0,0.7)'}}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View style={{flexDirection:"row", marginHorizontal: 12, marginVertical:5}}>
+                  <View style={styles.descriptionsBox}>
+                    <View>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor.instructor_students}</Text>
+                    </View>
+                    <View>
+                      <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Students</Text>
+                    </View>
+                  </View>
+                  <View style={styles.descriptionsBox}>
+                    <View>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor.instructor_courses}</Text>
+                    </View>
+                    <View>
+                      <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Courses</Text>
+                    </View>
+                  </View>
+                  <View style={styles.descriptionsBox}>
+                    <View>
+                      <Text style={styles.descriptionsBoxText}>{this.state.instructor.instructor_comments}</Text>
+                    </View>
+                    <View>
+                      <Text style={[styles.descriptions,{fontSize:12,color:'#B5B5B5'}]}>Comments</Text>
+                    </View>
+                  </View>
+                </View>
+                <View style={{marginVertical:10}}>
+                  <Text style={styles.descriptions}>
+                   {this.state.instructor.instructor_descriptions}
+                  </Text>
+                </View>
+              </View>
             </View>
           </ScrollableTabView>
         </View>
@@ -143,7 +236,7 @@ const styles = {
   },
   subContainer: {
     backgroundColor: '#F1F4F6',
-    paddingVertical: 5,
+    paddingVertical: 2,
   },
   cardImg: {
     width: Style.DEVICE_WIDTH,
@@ -157,19 +250,6 @@ const styles = {
     fontSize: 18,
     fontWeight: 'bold',
     color: 'rgba(0,0,0,0.7)',
-  },
-  joinButton: {
-    backgroundColor: 'rgb(232, 167, 60)',
-    height: 34,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
-    marginVertical: 5,
-  },
-  joinBtnText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#fff',
   },
   subTabViewWrapper: {
     paddingTop: 20,
@@ -208,6 +288,28 @@ const styles = {
   warning_icon: {
     width: 20,
     marginRight: 10
+  },
+  ratinNumber: {
+    fontWeight: 'bold',
+    fontSize: 32,
+    color: 'rgba(0,0,0,0.7)',
+  },
+  instructorImage: {
+    height: 72,
+    width: 72,
+    borderRadius: 36,
+    marginVertical: 10,
+  },
+  descriptionsBox: {
+    alignItems: "center",
+    marginHorizontal: 10,
+    flex: 1,
+  },
+  descriptionsBoxText: {
+    letterSpacing: 1,
+    fontWeight: 'bold',
+    color: 'rgba(0,0,0,0.7)',
+    marginTop: 2,
   }
 }
 
