@@ -1,8 +1,9 @@
 # 2017_SomeClass_proto
 SomeClass 2017 開發中
+![Alt text](./src/img/class_gallery.png)
 
 ## 備註欄位
-如果<code>react-native run-ios</code>發生錯誤，可以試試看將快取清除<code>npm start --reset-catch</code>，<br>
+如果<code>react-native run-ios</code>發生錯誤，可以試試看將快取清除<code>npm start --reset-cache</code>，<br>
 清除快取之後，在執行一次react native並且執行package server。
 
 ## 關於團隊
