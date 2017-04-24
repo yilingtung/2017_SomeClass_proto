@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import MyClassesListView from './MyClassesListView';
+
 import promoteGame from './../json/promoteGame';
+import userInfo from './../json/userInfo';
+
 import myOngoingClasses from './../json/myOngoingClasses';
 import myFinishedClasses from './../json/myFinishedClasses';
 
@@ -11,13 +14,56 @@ class MyClassesPage extends Component{
     super(props);
     console.log(12);
     this.state = {
+      userInfo: userInfo,
       classesData: promoteGame,
-      myOngoingClassesData: myOngoingClasses,
-      myFinishedClassesData: myFinishedClasses,
+      myOngoingClassesData: [],
+      myFinishedClassesData: [],
+      myWantedClassesDate: []
     };
+    this.generateOngoingClassesList = this.generateOngoingClassesList.bind(this);
+    this.generatemyFinishedClassesList = this.generatemyFinishedClassesList.bind(this);
+    this.generatemyWantedClassesDate = this.generatemyWantedClassesDate.bind(this);
+  }
+  componentDidMount(){
+    this.generateOngoingClassesList();
+    this.generatemyFinishedClassesList();
+    this.generatemyWantedClassesDate();
   }
   goToClassDetailPage = (game)=>{
     this.props.navigation.navigate('ClassDetailPage', {...game});
+  }
+  generateOngoingClassesList(){
+    var _ongoingClassesList = [];
+    promoteGame.forEach((game)=>{
+      this.state.userInfo.onGoing_Courses.forEach((course)=>{
+        if(game.title == course.title){
+          _ongoingClassesList.push(Object.assign(game, course));
+        }
+      });
+    });
+    this.setState({myOngoingClassesData: _ongoingClassesList});
+  }
+  generatemyFinishedClassesList(){
+    var _myFinishedClassesData = [];
+    promoteGame.forEach((game)=>{
+      this.state.userInfo.finished_Courses.forEach((course)=>{
+        if(game.title == course){
+          _myFinishedClassesData.push(game);
+        }
+      });
+    });
+    this.setState({myFinishedClassesData: _myFinishedClassesData});
+  }
+  generatemyWantedClassesDate(){
+    var _myWantedClassesDate = [];
+    promoteGame.forEach((game)=>{
+      this.state.userInfo.wanted_Courses.forEach((course)=>{
+        if(game.title == course){
+          _myWantedClassesDate.push(game);
+        }
+      });
+    });
+    this.setState({myWantedClassesDate: _myWantedClassesDate});
   }
   render(){
     return(
@@ -50,7 +96,7 @@ class MyClassesPage extends Component{
           width={80}
           height={80}
           navigation={this.props.navigation}
-          classesListData={this.state.classesData}
+          classesListData={this.state.myWantedClassesDate}
           goToClassDetailPage={this.goToClassDetailPage}
         />
       </ScrollableTabView>

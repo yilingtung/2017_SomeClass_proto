@@ -12,12 +12,12 @@ class ButtonOpenCourse extends Component{
   }
   render(){
     return(
-      <View>
+      <TouchableOpacity onPress={()=>{this.props.navigation.navigate('OpenClassPage');console.log(this.props);}}>
         <View style={styles.openCourseView}>
           <Image source={require('./../img/btnAdd_orange.png')} />
           <Text numberOfLines={2} style={styles.openCourseText}>熊課啦</Text>
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 }

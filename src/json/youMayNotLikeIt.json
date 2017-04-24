@@ -1,0 +1,214 @@
+[
+  {
+     "title": "怪獸工場-遊戲場景設計篇",
+     "thumbnail_image": "https://hahow.in/images/5858c6c2f528320700f8c088",
+     "descriptions": "怪獸的朋友們，我們即將在第三期的課程中與你們見面了，這次我們策劃了更豐富的內容要與大家分享！↵↵這堂課要帶給大家場景設計的↵各種觀念，不管是新手的你或是在職的朋友，這堂課能讓你更深入地了解場景設計，進而處理美術上各種艱巨的挑戰。↵↵希望大家一起支持我們前進，讓這頭怪獸能更加強大。",
+     "instructor": {
+       "instructor_name": "許友豪",
+       "instructor_photo": "https://graph.facebook.com/10153955241889933/picture",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 5,
+     "tags":[ "設計", "C/C++" ],
+     "Number_of_ratings": 64,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 12
+  },
+  {
+     "title": "隨時隨地玩音樂 GarageBand",
+     "thumbnail_image": "https://hahow.in/images/57f0dfdedc8ff207002bc16c?width=1000",
+     "descriptions": "想要創作求婚影片的配樂，寫首動人的情歌送給心愛的另一半？又或是製作專屬的手機鈴聲卻不知從何下手？在這裡你將得到解答！↵就算不懂樂器、沒有樂理基礎，都不用擔心，這門課將從零開始，從觀念解析到實戰操作，只要發揮你的想像力，動動手指頭就可以輕鬆完成一首曲子喔！",
+     "instructor": {
+       "instructor_name": "Chen Yan Hua",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 2,
+     "tags":[ "音樂", "吉他" ],
+     "Number_of_ratings": 2,
+     "rating": [],
+     "total_chapters": 12
+  },
+  {
+     "title": "Node.js 網站開發 with  React.js",
+     "thumbnail_image": "https://hahow.in/images/58254e5c5910c807008267d9",
+     "descriptions": "前幾堂課將會個別介紹Node.js核心模組之特性，並且講述相關Node.js框架，最後使用Node.js開發一個論壇類型網站，課程將會使用React.js作為前端Framework↵↵課程後面幾堂課會提到有關web cache方面，安全方面，load balance等議題↵↵最後會講解上架到AWS 的EC2上，使用nginx 當reverse proxy 並配置https的步驟",
+     "instructor": {
+       "instructor_name": "Chen Yan Hua",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 5,
+     "tags":[ "程式", "JavaScript", "Web" ],
+     "Number_of_ratings": 2,
+     "rating": [],
+     "total_chapters": 12
+  },
+  {
+     "title": "Photoshop練功坊 -入門操作到進階合成",
+     "thumbnail_image": "https://hahow.in/images/5881c1ff6ecf3a0700b793f5?width=1000",
+     "descriptions": "「隨著數位影像廣為傳播，修好一張圖已經是每個人必備的基礎技能」↵↵隨著 Photoshop 成為影像世代的顯學，網路上的教學卻往往以單一技巧為主，我們常常學了很多酷炫的功能，卻沒辦法自己做出作品，這而這門課，將帶你從入門到進階，成為你學習 Photoshop 最好的投資。",
+     "instructor": {
+       "instructor_name": "林協霆",
+       "instructor_photo": "https://lh6.googleusercontent.com/-k5ohx9wnsPk/AAAAAAAAAAI/AAAAAAAAI2M/o7g0LfISVIw/photo.jpg?sz=170",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "醫學生，現居台南，興趣為攝影與電影。業餘平面設計、動畫設計；目前正往UX/UI、3D軟體的路上發展。長期觀注醫師勞動議題，支持醫師納入勞基法。認同跨領域合作的重要，平時喜歡認識不同背景的專業人士。",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 1,
+     "tags":[ "設計", "C/C++" ],
+     "Number_of_ratings": 43,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+  {
+     "title": "不到一小時就能學會的個人網站製作",
+     "thumbnail_image": "https://hahow.in/images/58b941e65c4e6507007caa76",
+     "descriptions": "運用免費的雲端架站服務，5分鐘讓您專屬的網站上線！↵　不需要任何程式基礎，只需滿滿熱情、鍵盤與滑鼠。　隨時更新自己的網站，無需等待。",
+     "instructor": {
+       "instructor_name": "YH.Fang",
+       "instructor_photo": "https://hahow.in/images/581ed846cca88007007064fb",
+       "instructor_title": "Data Scientist",
+     "instructor_descriptions": "",
+     "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 4,
+     "tags":[ "程式", "C/C++" ],
+     "Number_of_ratings": 535,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+  {
+     "title": "初心者！Lightroom數位暗房基礎後製",
+     "thumbnail_image": "https://hahow.in/images/5832a342aed2140700864318",
+     "descriptions": "學後製單純想把照片變漂亮一點，自學軟體並自創怪招才發現怎麼書上也這樣做，透過簡易講解操作方式讓新手快速入門！成就感十足！",
+     "instructor": {
+       "instructor_name": "王喜米",
+       "instructor_photo": "https://hahow.in/images/583403f7091282070082dcd9",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 4,
+     "tags":[ "程式", "C/C++" ],
+     "Number_of_ratings": 32,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 4,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+]

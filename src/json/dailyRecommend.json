@@ -1,0 +1,144 @@
+[
+  {
+     "title": "必學6堂課|攝影剪輯 MV,微電影,超容易！",
+     "thumbnail_image": "https://hahow.in/images/58666eeff108e00800c25a51",
+     "descriptions": "想學剪輯攝影? 想自己製作MV?還是想當個Youtuber? 6堂課教會你！自編、自導、自演、自剪，影片製作不再靠別人！↵↵哪些人適合這堂課？↵- 跟我一樣是窮學生，但想自己製作影片者！↵- 想學剪輯、攝影的人 | 用影像記錄生活！↵- 音樂人 | 想自己製作MV，省掉大筆製作費用！↵- 想當Youtuber的人 | 你有很多想法，想跟網友們分享！↵- 想從事行銷工作的人 | 影片製作能力，是新興媒體世代存活的必備條件！↵- 想當一個稱職的男/女友 | 你將不再會再被另一半嫌攝影技術差！↵-  想脫離魯蛇 | 為你愛慕已久的人，製作影片，大膽示愛吧！",
+     "instructor": {
+       "instructor_name": "武敬凱",
+       "instructor_photo": "https://hahow.in/images/585eaa2bf108e00800c21f5d",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "大家好！我是武敬凱！曾在「台灣微軟」擔任影片製作工作、亦擔任過主持人、拍過廣告，也在大學時考取新北、台北、桃園街頭藝人，同時也在各級學校及音樂教室擔任吉他、烏克麗麗老師近5年，但你可能不會想到，我是一個大四學生！ 曾替「台灣微軟」製作影片，創下歷年最高點擊率；曾於「風傳媒」投稿文章，創下50000觀看次數；曾用500的預算，自編自導自演且獨立製作翻唱MV，在FB創下100萬以上觀看次數。 希望我的「影片製作」、「音樂製作」、「社群行銷」、「文案撰寫」能力，可以對各位帶來幫助：）",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 4,
+     "tags":[ "設計", "影像製作" ],
+     "Number_of_ratings": 12,
+     "rating": [],
+     "total_chapters": 8,
+  },{
+     "title": "App Inventor 2 入門特訓",
+     "thumbnail_image": "https://hahow.in/images/586d9c92f108e00800c28464",
+     "descriptions": "25個錄影教學單元，使用拼圖來建構程式，就算完全沒有接觸過程式，也能開發出有趣的Android APP。↵↵哪些人適合這堂課？↵1. 希望從零開始學程式↵2. 玩Arduino硬體，並想透過APP遠端控制↵3. 希望深入了解APP程式設計的各種邏輯和語法↵4. 想入門Android APP程式設計↵5. 想要修改別人App程式碼↵6. 想讓小孩提早接觸程式設計↵7. 想要軟、硬並進，成為出色的機電整合創客↵8. 學校有教但怎麼也聽不懂，想求救高手",
+     "instructor": {
+       "instructor_name": "Lien Ted",
+       "instructor_photo": "https://hahow.in/images/586db31ea8aae907000cd174",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "是創客，也是程式設計師，喜歡發想做有趣的東西。",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 3,
+     "tags":[ "程式", "更多", "APP" ],
+     "Number_of_ratings": 26,
+     "rating": [],
+     "total_chapters": 12
+  },
+  {
+     "title": "藝用解剖學1 - 達文西維特魯威人",
+     "thumbnail_image": "https://hahow.in/images/58f0d5154909c907004abc84",
+     "descriptions": "在描繪人物時，是否總覺得看起來怪怪的，像外星人不像地球人?　不是你／妳沒有繪畫的天份，而是因為對全身骨骼肌肉的比例分佈位置不理解。快來學習藝用解剖學，跨出畫出準確人物的第一步！",
+     "instructor": {
+       "instructor_name": "Chen Yan Hua",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 3,
+     "tags":[ "設計", "素描", "文藝復興" ],
+     "Number_of_ratings": 2,
+     "rating": [],
+     "total_chapters": 5
+  },
+  {
+     "title": "吉他從零開始-Fingerstyle（進階）",
+     "thumbnail_image": "https://hahow.in/images/5865e927f108e00800c25572",
+     "descriptions": "你知道木吉他其實身兼吉他、貝斯、還有鼓三種功夫於一身嗎?想學會解放木吉他最大潛能的 Fingerstyle 嗎?押尾光太郎、Andy Mckee、Mike Daws是你憧憬的目標嗎?現在就脫初級，跟著我一起挑戰更精深的 Fingerstyle世界吧!",
+     "instructor": {
+       "instructor_name": "Chen Yan Hua",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 4,
+     "tags":[ "音樂", "吉他", "Fingerstyle" ],
+     "Number_of_ratings": 2,
+     "rating": [],
+     "total_chapters": 7
+  },
+  {
+     "title": "設計思考，頂尖企業都在學的創新流程！",
+     "thumbnail_image": "https://hahow.in/images/586e59e7a8aae907000cdafe",
+     "descriptions": "第一個專為線上學習開設的全中文設計思考課，透過紮實步驟引導，讓你在體驗經濟的時代學會用「以人為本」的方式解決問題↵創造更多具有價值的產品與服務。",
+     "instructor": {
+       "instructor_name": "Chen Yan Hua",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 4,
+     "tags":[ "設計", "產業創意" ],
+     "Number_of_ratings": 2,
+     "rating": [],
+     "total_chapters": 18
+  },
+  {
+     "title": "挖出你的節奏細胞!爵士鼓教學-基本節奏篇",
+     "thumbnail_image": "https://hahow.in/images/580f1f53da04300700fe7ff1",
+     "descriptions": "北京現代音樂研休學院的爵士鼓教材，簡單的開始；舉一反三的思維教學。不需音樂底子，只要有熱血的心，簡單明瞭的教學將帶你進入節奏的世界！",
+     "instructor": {
+       "instructor_name": "黃晟翔",
+       "instructor_photo": "https://graph.facebook.com/1403007693050510/picture",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 3,
+     "tags":[ "程式", "C/C++" ],
+     "Number_of_ratings": 23,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+]

@@ -142,6 +142,18 @@ export const MyPersonalPageNavigator = StackNavigator({
         style: styles.navBar
       })
     }
+  },
+  OpenClassPage: {
+    screen: OpenClassPage,
+    navigationOptions: {
+      header: ({state})=>({
+        left: <NavBarBackButton />,
+        right: <NavBarShareButton />,
+        title: '開課',
+        titleStyle: styles.navBarTitle,
+        style: styles.navBar
+      })
+    }
   }
 },{
   headerMode: 'float'

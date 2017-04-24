@@ -16,49 +16,6 @@
       "rating_stars": 5,
       "tags":[ "程式", "C/C++" ],
       "Number_of_ratings": 246,
-      "total_chapters": 8,
-      "chapters": [
-        {
-          "chapter_title": "認識 C 語言",
-          "courses": [
-            {
-              "course_title": "變數與常數",
-              "course_media": "https://hahow.in/images/58677f12f108e00800c25f52",
-              "course_description": "第一章的第一個步驟的描述"
-            },
-            {
-              "course_title": "程式邏輯與流程",
-              "course_media": "https://hahow.in/images/58677f12f108e00800c25f52",
-              "course_description": "第一章的第二個步驟的描述"
-            },
-            {
-              "course_title": "開發環境 Visual studio 介紹",
-              "course_media": "https://hahow.in/images/58677f12f108e00800c25f52",
-              "course_description": "第一章的第二個步驟的描述"
-            },
-            {
-              "course_title": "C/C++ std library 介紹",
-              "course_media": "https://hahow.in/images/58677f12f108e00800c25f52",
-              "course_description": "第一章的第二個步驟的描述"
-            }
-          ]
-        },
-        {
-          "chapter_title": "運算思維與實作",
-          "courses": [
-            {
-              "course_title": "計算機圖學 Using OpenGL",
-              "course_media": "https://hahow.in/images/58677f12f108e00800c25f52",
-              "course_description": "第二章的第一個步驟的描述"
-            },
-            {
-              "course_title": "自製計算機 C++ in 20 mins",
-              "course_media": "https://hahow.in/images/58677f12f108e00800c25f52",
-              "course_description": "第二章的第二個步驟的描述"
-            }
-          ]
-        }
-      ],
       "rating": [
         {
           "rating_id": "1",

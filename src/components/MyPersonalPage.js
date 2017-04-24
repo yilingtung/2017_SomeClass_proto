@@ -109,7 +109,7 @@ class MyPersonalPage extends Component{
               {
                 this.state.userOpenCoursesList == 0 ?
                   <View>
-                    <ButtonOpenCourse />
+                    <ButtonOpenCourse navigation={this.props.navigation}/>
                     <View style={{alignItems: 'center',marginVertical:0}}>
                       <Text style={{color: '#B5B5B5',marginVertical:5}}>還沒開設課程</Text>
                       <Text style={{color: '#B5B5B5',marginVertical:5}}>快和大家分享你的信念吧</Text>

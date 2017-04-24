@@ -24,5 +24,33 @@
       "userName": "UserName1",
       "comment": "Good",
     },
+  ],
+  "onGoing_Courses": [
+    {
+      "title": "C 語言入門特訓",
+      "finish_chapters": 6,
+      "next_chapters": "7. 前置處理器 #include",
+    },
+    {
+      "title": "怪獸工場-遊戲場景設計篇",
+      "finish_chapters": 1,
+      "next_chapters": "2. 讓我的設計更有趣-用幾何來簡化",
+    },
+    {
+      "title": "Photoshop練功坊 -入門操作到進階合成",
+      "finish_chapters": 3,
+      "next_chapters": "4. [變形與裁切]還原與步驟紀錄_ft.步驟紀錄面版",
+    },
+    {
+      "title": "初心者！Lightroom數位暗房基礎後製",
+      "finish_chapters": 9,
+      "next_chapters": "10. Photoshop！輔助加入光源效果",
+    },
+  ],
+  "finished_Courses": [
+    "Python Web 程式設計入門實戰", "App Inventor 2 入門特訓",
+  ],
+  "wanted_Courses": [
+    "Node.js 網站開發 with  React.js", "不到一小時就能學會的個人網站製作"
   ]
 }
