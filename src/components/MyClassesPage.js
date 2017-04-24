@@ -60,7 +60,7 @@ class MyClassesPage extends Component{
 
 const styles = {
   container: {
-    marginBottom: 48
+    marginBottom: 48,
   }
 }
 

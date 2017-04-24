@@ -3,6 +3,7 @@ import { View, Text, Image, WebView, ScrollView } from 'react-native';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import ClassRatingStars from './ClassRatingStars';
 import Line from './line';
+import Button from './button';
 import RatingView from './RatingView';
 import Style from './style.js';
 
@@ -57,9 +58,10 @@ class ClassDetailPage extends Component{
               rating_stars={this.state.rating_stars}
               Number_of_ratings={this.state.Number_of_ratings}
             />
-            <View style={styles.joinButton}>
-              <Text style={styles.joinBtnText}>加入此課程</Text>
-            </View>
+            <Button
+              title={"加入此課程"}
+              backgroundColor={'rgb(232, 167, 60)'}
+            />
           </View>
         </View>
         <View>
@@ -255,7 +257,7 @@ const styles = {
   },
   subContainer: {
     backgroundColor: '#F1F4F6',
-    paddingVertical: 5,
+    paddingVertical: 2,
   },
   cardImg: {
     width: Style.DEVICE_WIDTH,
@@ -269,19 +271,6 @@ const styles = {
     fontSize: 18,
     fontWeight: 'bold',
     color: 'rgba(0,0,0,0.7)',
-  },
-  joinButton: {
-    backgroundColor: 'rgb(232, 167, 60)',
-    height: 34,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
-    marginVertical: 5,
-  },
-  joinBtnText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#fff',
   },
   subTabViewWrapper: {
     paddingTop: 20,

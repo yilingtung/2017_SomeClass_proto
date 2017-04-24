@@ -23,42 +23,42 @@ class VerticalScrollView extends Component{
           titleButton={this.props.titleButton}
         />
         <View>
-        <View style={styles.cardList}>
-          {
-            this.props.itemList.map((item) => {
-            return(
-              <View key={item.title}>
-                <TouchableOpacity
-                  style={styles.card}
-                  onPress={()=>this.props.goToClassDetailPage(item)}
-                >
-                  <Image
-                    source={{uri:item.thumbnail_image}}
-                    style={[styles.cardImg, {width: this.props.width}]}
-                  />
-                  <View style={styles.cardContent}>
-                    <Text numberOfLines={2} style={{lineHeight: 20}}>
-                      {item.title}
-                    </Text>
-                    {this.props.showRating &&
-                      <ClassRatingStars
-                        rating_stars={item.rating_stars}
-                        Number_of_ratings={item.Number_of_ratings}
-                        showSmallRatingStar={this.props.showSmallRatingStar}
-                      />
-                    }
-                    {this.props.showTags &&
-                      <Tags tags={item.tags} />
-                    }
-                  </View>
-                </TouchableOpacity>
-                <View style={{marginLeft: 12}}>
+          <View style={styles.cardList}>
+            {
+              this.props.itemList.map((item) => {
+              return(
+                <View key={item.title}>
+                  <TouchableOpacity
+                    style={styles.card}
+                    onPress={()=>this.props.goToClassDetailPage(item)}
+                  >
+                    <Image
+                      source={{uri:item.thumbnail_image}}
+                      style={[styles.cardImg, {width: this.props.width}]}
+                    />
+                    <View style={styles.cardContent}>
+                      <Text numberOfLines={2} style={{lineHeight: 20}}>
+                        {item.title}
+                      </Text>
+                      {this.props.showRating &&
+                        <ClassRatingStars
+                          rating_stars={item.rating_stars}
+                          Number_of_ratings={item.Number_of_ratings}
+                          showSmallRatingStar={this.props.showSmallRatingStar}
+                        />
+                      }
+                      {this.props.showTags &&
+                        <Tags tags={item.tags} />
+                      }
+                    </View>
+                  </TouchableOpacity>
+                  <View style={{marginLeft: 12}}>
                   <Line />
                 </View>
               </View>
-            )
-          })}
-        </View>
+              )
+            })}
+          </View>
         </View>
       </View>
     )

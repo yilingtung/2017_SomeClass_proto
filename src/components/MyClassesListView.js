@@ -85,7 +85,6 @@ class MyClassesListView extends Component{
               )
           })}
         </View>
-        <Line />
       </ScrollView>
     );
   }
@@ -94,10 +93,12 @@ class MyClassesListView extends Component{
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F1F4F6',
+    paddingVertical: 8,
   },
   cardList: {
     flexDirection: 'column',
+    backgroundColor: '#fff',
   },
   card:{
     flexDirection: 'row',

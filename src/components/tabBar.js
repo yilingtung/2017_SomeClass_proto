@@ -10,6 +10,7 @@ import {
 import {
   BrowsePageNavigator,
   MyClassesPageNavigator,
+  MyPersonalPageNavigator,
 } from './../Router.js';
 //ChannelsPage
 import ChannelsPage from './ChannelsPage';
@@ -86,7 +87,7 @@ class TabBar extends Component{
         <TabBarIOS.Item
           icon={require('./../img/btnMyClass_normal.png')}
           selectedIcon={require('./../img/btnMyClass_normal.png')}
-          title="我"
+          title="自己"
           selected={this.state.selectedTab === 'Me'}
           onPress={() => {
             this.setState({
@@ -94,7 +95,7 @@ class TabBar extends Component{
             });
           }}
         >
-          {<View></View>}
+          <MyPersonalPageNavigator />
         </TabBarIOS.Item>
       </TabBarIOS>
     )
