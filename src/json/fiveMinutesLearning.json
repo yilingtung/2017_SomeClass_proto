@@ -1,0 +1,191 @@
+[
+  {
+     "title": "C 語言入門特訓",
+     "thumbnail_image": "https://hahow.in/images/58677f12f108e00800c25f52",
+     "descriptions": "什麼是C語言？↵↵C語言是世界前三大使用最廣泛的程式語言之一，不僅大量使用在系統程式和Linux，連近年火紅的創客神器Arduino也是用C語言來控制的。課程將以C語言聖經「The C Programming Langauge 」內容為教材，從操作變數和運算符號開始，詳細講解如何使用C語言構建程式敍述、如何編寫和運行函式、如何在程序中加入邏輯判斷、迴圈和跳轉、如何使用預處理指令、以及如何使用字串和陣列...等等。本課程適合於對軟、硬體程式設計感興趣的人，對於初心者或有經驗的熟手都有幫助。↵↵1. 希望從零開始學程式↵2. 想報考程式設計檢定，或有志報考大學資工的國高中學生↵3. 希望深入了解C語言的邏輯語法↵4. 想要修改別人C語言程式碼↵5. 想讓小孩提早接觸程式設計↵6. 想要軟、硬兼備，成為出色的機電整合創客↵7. 學校有教但怎麼也聽不懂，想求教高手↵8. 工作上不用寫程式，但需要了解程式設計師的思考邏輯↵9. 想知道如何解大學入學程設APCS或Bebras考題",
+     "instructor": {
+       "instructor_name": "Lien Ted",
+       "instructor_photo": "https://hahow.in/images/586db31ea8aae907000cd174",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "是創客，也是程式設計師，喜歡發想做有趣的東西。",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 5,
+     "tags":[ "程式", "C/C++" ],
+     "Number_of_ratings": 246,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+  {
+     "title": "Python Web 程式設計入門實戰",
+     "thumbnail_image": "https://hahow.in/images/5867790cf108e00800c25f19",
+     "descriptions": "Python 是世界上最受歡迎的程式語言之一，本課程將帶領學員入門 Python Web 開發實戰，打造屬於你自己的網路應用程式↵↵課前資訊↵0. 一顆樂於自我學習和用技術改善生活的心↵1. Windows/Linux/Mac OS（講師將使用 Mac OS 系統）↵2.  文字編輯器（講師將以 Sublime3 搭配 Anaconda 工具為主）↵3. Chrome 或 Firefox 瀏覽器↵4. Terminal 終端機（Windows 使用 cygwin 或 cmder）↵5. Python 3 程式語言↵6. Anaconda 開發環境",
+     "instructor": {
+       "instructor_name": "張凱迪 kdchang",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter, Software Engineer & Maker. JavaScript, Python & Arduino/Android lover.:)",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 5,
+     "tags":[ "程式", "Python", "Web" ],
+     "Number_of_ratings": 1,
+     "rating": [],
+     "total_chapters": 9
+  },
+  {
+     "title": "靈魂的代言人-塔羅牌義全解析",
+     "thumbnail_image": "https://hahow.in/images/586ef24ba8aae907000cdf73?width=1000",
+     "descriptions": "塔羅已盛行多時，隨著時代的進步下，塔羅不再那麼神秘，每一個人都可以替自己的人生下決定，但當你需要建議時，該怎麼辦呢？塔羅，將陪伴你找尋真實的自己並給予最真誠的建議......",
+     "instructor": {
+       "instructor_name": "黃晟翔",
+       "instructor_photo": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/17861916_1639389309412346_5984352422169516258_n.jpg?oh=a24c39df98b60ce1dd8ed2b8285d1e07&oe=59907BFE",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "北京現代音樂研休學院 主修爵士鼓 創立鼓爵音樂 廣告編曲師 唱作家 作品2百餘首 著作:老天爺的十一堂課",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 4,
+     "tags":[ "生活", "星象" ],
+     "Number_of_ratings": 29,
+     "rating": [],
+     "total_chapters": 12
+  },
+  {
+     "title": "怪獸工場-基礎角色造型篇",
+     "thumbnail_image": "https://hahow.in/images/57dd26f0d5766a0700c6be3b",
+     "descriptions": "給基礎程度的你，輕鬆由手繪入門轉電繪！↵本課程以基本觀念切入，以循序漸進的繪畫流程帶你掌握繪畫的構成及訣竅。讓入門者也可以體驗到繪畫創作的樂趣。",
+     "instructor": {
+       "instructor_name": "Chen Yan Hua",
+       "instructor_photo": "https://res.cloudinary.com/dxwnkzsxe/image/upload/v1492991545/chen_yan_hua_m3g1md.jpg",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 3,
+     "tags":[ "設計", "電腦繪圖" ],
+     "Number_of_ratings": 2,
+     "rating": [],
+     "total_chapters": 8
+  },
+  {
+     "title": "相機外閃的神奇攝影術",
+     "thumbnail_image": "https://hahow.in/images/5841b2f3d821b10700a82aa7",
+     "descriptions": "外閃是很多人擁有的第一支閃光燈，他輕巧小好攜帶，是攝影師戶外打光的好助手。很多人會以為他小而認為它能力不足，其實善用光線走向和控光器材，你也能用小閃燈拍出很棒的打燈作品喔！",
+     "instructor": {
+       "instructor_name": "張馬克",
+       "instructor_photo": "https://hahow.in/images/584031a2d821b10700a82182",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 3,
+     "tags":[ "程式", "C/C++" ],
+     "Number_of_ratings": 12,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 2,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+  {
+     "title": "六分鐘快速理解一篇英文文章!",
+     "thumbnail_image": "https://hahow.in/images/583ffc34d821b10700a81f1c",
+     "descriptions": "同學在閱讀長篇的學術英文文章上有困擾嗎？讓台灣唯一多益、托福 iBT、雅思滿分的老師教你 6 分鐘快速略讀一篇學術文章！無論是大學學測英文閱讀測驗、大學英語四六級考試、托福（ TOEFL ）或是雅思（ IELTS ）的學術文章（ 300 字到800 字左右）都可以在 6 分鐘內快速了解文章脈絡！就算是初學者也可以提升自己的英文閱讀能力！",
+     "instructor": {
+       "instructor_name": "Eric Yang",
+       "instructor_photo": "https://hahow.in/images/57f28ee4dc8ff207002bce8c",
+       "instructor_title": "Data Scientist",
+       "instructor_descriptions": "",
+       "instructor_rating": "5",
+       "instructor_students": "42",
+       "instructor_courses": "6",
+       "instructor_comments": "36"
+     },
+     "rating_stars": 5,
+     "tags":[ "程式", "C/C++" ],
+     "Number_of_ratings": 42,
+     "rating": [
+       {
+         "rating_id": "1",
+         "userId": "123",
+         "userName": "Steven Lee",
+         "time_stamp": "2017/04/23",
+         "rating": 5,
+         "comment": "He did an amazing clarification of his courses!"
+       },{
+         "rating_id": "2",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 3,
+         "comment": "The assignments in the course are often requiring use of techniques that only get covered later in the course. There is also insufficient demonstrations using the Mac OS."
+       },{
+         "rating_id": "3",
+         "userId": "124",
+         "userName": "Winson Lu",
+         "time_stamp": "2016/04/21",
+         "rating": 5,
+         "comment": "I enjoyed the lectures, because of my work requirements I needed to learn Python in a hurry, this course did just that for me. Thanks Jose for a great course."
+       }
+     ],
+     "total_chapters": 8
+  },
+]
