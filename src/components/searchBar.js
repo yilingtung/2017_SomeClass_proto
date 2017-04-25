@@ -46,7 +46,7 @@ class SearchBar extends Component{
   }
   render(){
     return(
-      <View>
+      <View style={{flex:1,flexDirection:'row'}}>
         <View style={styles.searchBar}>
           <Image style={styles.searchIcon} source={require('./../img/iconSearch.png')}/>
           <TextInput
@@ -83,7 +83,6 @@ class SearchBarButton extends Component{
 const styles = {
   searchBar: {
     height: 30 ,
-    width: 300,
     marginLeft: -20,
     flexDirection: 'row',
     backgroundColor: '#fff',

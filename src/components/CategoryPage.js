@@ -66,14 +66,15 @@ class CategoryPage extends Component {
     return(
       <View style={styles.container}>
         <ScrollView
-          style={{height: 30}}
           contentInset={{left: 80}}
           contentOffset={{x: -80}}
           centerContent
           horizontal
           directionalLockEnabled
+          showsHorizontalScrollIndicator={false}
           automaticallyAdjustContentInsets={false}
           ref={(scrollView)=>{this.filterScroll = scrollView}}
+          style={{backgroundColor:'#fff'}}
         >
           <View style={styles.filterContainer}>
             {this.state.category==undefined?null:this.state.category.map((cat)=>{
@@ -91,20 +92,24 @@ class CategoryPage extends Component {
                     this.goToOneSpliteCategoryPage(cat);
                   }}
                 >
-                  <Text style={{height: 20}}>{ cat.title }</Text>
+                  <Text style={{color: 'rgb(197, 198, 200)', fontWeight: 'bold',paddingBottom:10}}>{ cat.title }</Text>
                 </TouchableOpacity>
               )
             })}
             {this.state.category==undefined?<Text>{this.state.recordCat}</Text>:null}
           </View>
         </ScrollView>
-        <Line />
-        <ScrollView style={{height: Style.DEVICE_HEIGHT - 94 - 49}}>
+        <View style={{height:1,backgroundColor:"rgba(0,0,0,.2)"}}></View>
+        <ScrollView style={{backgroundColor: '#fff'}}>
+          <Line width={8}/>
           <VerticalScrollView
             width={150}
+            showRating={true}
+            showTags={true}
             goToClassDetailPage={this.goToClassDetailPage}
             itemList={this.state.promoteGame}
           />
+          <Line width={8}/>
         </ScrollView>
       </View>
     );
@@ -113,21 +118,20 @@ class CategoryPage extends Component {
 
 const styles = {
   container: {
-    backgroundColor: '#fff'
+    backgroundColor: '#F1F4F6',
+    marginBottom: 104,
   },
   filterContainer: {
     flexDirection: 'row',
-    paddingRight: 10,
-    paddingLeft: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
-    height: 30
+    marginHorizontal: 10,
+    marginBottom: 5,
+    height: 49,
+
   },
   filterItem: {
-    marginLeft: 10,
-    marginRight: 10,
-    height: 20,
+    marginHorizontal: 12,
     alignItems: 'center',
+    justifyContent: 'center',
   }
 }
 

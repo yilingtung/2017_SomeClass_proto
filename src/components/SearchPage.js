@@ -8,6 +8,7 @@ import category from './../json/category.json';
 import promoteGame from './../json/promoteGame';
 //User Info Data
 import userInfo from './../json/userInfo';
+import Line from './line';
 
 class SearchPage extends Component {
   constructor(props){
@@ -83,14 +84,16 @@ class SearchPage extends Component {
   }
   render(){
     return(
-      <View>
+      <View style={{backgroundColor:'#fff', flex:1}}>
         <ScrollView style={{height: Style.DEVICE_HEIGHT - 94 - 49}}>
+          <Line width={8}/>
           <VerticalScrollView
             title={this.state.verticalScrollViewTitle}
             width={150}
             goToClassDetailPage={this.goToClassDetailPage}
             itemList={this.state.promoteGame}
           />
+          <Line />
           {this.state.showingRecomandList &&
             <VerticalScrollView
               title={'推薦課程'}
@@ -99,6 +102,7 @@ class SearchPage extends Component {
               itemList={this.state.recomandGame}
             />
           }
+          <Line width={16}/>
         </ScrollView>
       </View>
     );

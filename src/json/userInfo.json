@@ -48,7 +48,14 @@
     },
   ],
   "finished_Courses": [
-    "Python Web 程式設計入門實戰", "App Inventor 2 入門特訓",
+    {
+      "title": "App Inventor 2 入門特訓",
+      "my_Rating": 4,
+    },
+    {
+      "title": "Python Web 程式設計入門實戰",
+      "my_Rating": 5,
+    },
   ],
   "wanted_Courses": [
     "Node.js 網站開發 with  React.js", "不到一小時就能學會的個人網站製作"
