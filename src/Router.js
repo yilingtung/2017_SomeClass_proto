@@ -56,10 +56,10 @@ export const BrowsePageNavigator = StackNavigator({
     navigationOptions: {
       header: ({state}) => ({
         left: (
-          null
+          <SearchBar ref={(searchBar)=>(state.searchBar = searchBar)}/>
         ),
         title: (
-          <SearchBar ref={(searchBar)=>(state.searchBar = searchBar)}/>
+          null
         ),
         right: (
           <NavBarBackButton showingText="取消" />

@@ -48,7 +48,7 @@ class SearchBar extends Component{
   render(){
     return(
         <View style={styles.searchBar}>
-          <Image style={styles.searchIcon} source={require('./../img/iconSearch.png')}/>
+          <Image style={styles.searchIcon} source={require('./../img/btnSearch_gray.png')}/>
           <TextInput
             style={styles.searchBarText}
             onChangeText={(input) => this.searchGames(input)}
@@ -83,17 +83,18 @@ const styles = {
   searchBar: {
     height: 20 ,
     flex: 1,
-    marginLeft: - Style.DEVICE_WIDTH * 0.1,
+    width: Style.DEVICE_WIDTH-69,
     flexDirection: 'row',
     backgroundColor: '#fff',
     borderRadius: 5,
-    paddingLeft: 8.5,
-    marginTop: 7,
-    marginBottom: 7
+    marginLeft: 12,
+    marginRight: 57,
+    marginVertical: 7,
+    paddingHorizontal: 12,
   },
   searchBarText: {
     height: 20,
-    color: 'rgb(90, 187, 214)',
+    color: 'rgb(197, 198, 200)',
     fontSize: 15,
     flex: 1,
     alignSelf: 'center'
@@ -102,7 +103,7 @@ const styles = {
     alignSelf: 'center',
     width: 18,
     height: 18,
-    marginRight:5.5
+    marginRight: 5,
   },
   headerIcon: {
     width: 33,

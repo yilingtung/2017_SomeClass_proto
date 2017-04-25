@@ -12,7 +12,7 @@ class NavBarBackButton extends Component{
           this._reactInternalInstance._currentElement._owner._currentElement.props.navigation.goBack();
         }}
       >
-        {this.props.showingText?<Text style={styles.touchableOpacityText}>{this.props.showingText}</Text>:<Image style={styles.headerIcon} source={require('./../img/btnBack.png')} />}
+        {this.props.showingText?<View style={styles.headerIcon}><Text style={styles.touchableOpacityText}>{this.props.showingText}</Text></View>:<Image style={styles.headerIcon} source={require('./../img/btnBack.png')} />}
       </TouchableOpacity>
     );
   };
@@ -22,7 +22,6 @@ class NavBarShareButton extends Component{
   render(){
     return(
       <TouchableOpacity
-        style={styles.header}
         onPress={()=>{
           //分享
           Share.share({
@@ -32,7 +31,7 @@ class NavBarShareButton extends Component{
           .catch((error) => this.setState({result: 'error: ' + error.message}));
         }}
       >
-        {this.props.showingText?<Text style={styles.touchableOpacityText}>{this.props.showingText}</Text>:<Image style={styles.headerIcon} source={require('./../img/btnShare.png')} />}
+        {this.props.showingText?<View style={styles.headerIcon}><Text style={styles.touchableOpacityText}>{this.props.showingText}</Text></View>:<Image style={styles.headerIcon} source={require('./../img/btnShare.png')} />}
       </TouchableOpacity>
     );
   }
@@ -42,7 +41,6 @@ class NavBarLikeButton extends Component{
   render(){
     return(
       <TouchableOpacity
-        style={styles.header}
         onPress={()=>{
           //送出喜好設定
 
@@ -55,20 +53,18 @@ class NavBarLikeButton extends Component{
 }
 
 const styles = {
-  header: {
+  headerIcon: {
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingLeft:8.5,
-    paddingRight:8.5
-  },
-  headerIcon: {
-    alignSelf: 'center',
+    alignItems: 'center',
     width: 33,
-    height: 33
+    height: 33,
+    marginHorizontal: 10,
   },
   touchableOpacityText: {
     color: '#fff',
-    marginRight:10
+    flexDirection: 'row',
+    fontWeight: 'bold',
   }
 }
 
