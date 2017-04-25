@@ -15,6 +15,8 @@ import {
   MyPersonalPageNavigator
 } from './../Router.js';
 
+var btnBrowse = require('./../img/btnBrowse_normal.png');
+
 class TabBar extends Component{
   constructor(props){
     super(props);
@@ -31,8 +33,8 @@ class TabBar extends Component{
         barTintColor="white"
       >
         <TabBarIOS.Item
-          icon={require('./../img/btnBrowse_normal.png')}
-          selectedIcon={require('./../img/btnBrowse_normal.png')}
+          icon={btnBrowse}
+          selectedIcon={btnBrowse}
           title="首頁"
           selected={this.state.selectedTab === 'BrowsePage'}
           onPress={() => {

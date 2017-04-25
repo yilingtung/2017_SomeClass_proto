@@ -83,7 +83,7 @@ class SearchPage extends Component {
   }
   render(){
     return(
-      <View>
+      <View style={{backgroundColor: '#fff', flex: 1}}>
         <ScrollView style={{height: Style.DEVICE_HEIGHT - 94 - 49}}>
           <VerticalScrollView
             title={this.state.verticalScrollViewTitle}
