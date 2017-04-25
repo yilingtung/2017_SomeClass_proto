@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 //Games JSON Data
 import promoteGame from './../json/promoteGame';
+import Style from './style.js';
 
 class SearchBar extends Component{
   //搜尋的功能元件
@@ -46,16 +47,14 @@ class SearchBar extends Component{
   }
   render(){
     return(
-      <View style={{flex:1,flexDirection:'row'}}>
         <View style={styles.searchBar}>
-          <Image style={styles.searchIcon} source={require('./../img/iconSearch.png')}/>
+          <Image style={styles.searchIcon} source={require('./../img/btnSearch_gray.png')}/>
           <TextInput
             style={styles.searchBarText}
             onChangeText={(input) => this.searchGames(input)}
             value={this.state.searchText}
           />
         </View>
-      </View>
     )
   }
 }
@@ -82,25 +81,29 @@ class SearchBarButton extends Component{
 
 const styles = {
   searchBar: {
-    height: 30 ,
-    marginLeft: -20,
+    height: 20 ,
+    flex: 1,
+    width: Style.DEVICE_WIDTH-69,
     flexDirection: 'row',
     backgroundColor: '#fff',
     borderRadius: 5,
-    paddingLeft: 8.5
+    marginLeft: 12,
+    marginRight: 57,
+    marginVertical: 7,
+    paddingHorizontal: 12,
   },
   searchBarText: {
-    height: 30,
-    color: 'rgb(90, 187, 214)',
+    height: 20,
+    color: 'rgb(197, 198, 200)',
     fontSize: 15,
-    width: 200,
+    flex: 1,
     alignSelf: 'center'
   },
   searchIcon:{
     alignSelf: 'center',
     width: 18,
     height: 18,
-    marginRight:5.5
+    marginRight: 5,
   },
   headerIcon: {
     width: 33,

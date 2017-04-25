@@ -84,9 +84,8 @@ class SearchPage extends Component {
   }
   render(){
     return(
-      <View style={{backgroundColor:'#fff', flex:1}}>
-        <ScrollView style={{height: Style.DEVICE_HEIGHT - 94 - 49}}>
-          <Line width={8}/>
+      <ScrollView style={styles.container}>
+        <View style={{marginVertical: 8, backgroundColor: '#fff',}}>
           <VerticalScrollView
             title={this.state.verticalScrollViewTitle}
             width={150}
@@ -102,15 +101,18 @@ class SearchPage extends Component {
               itemList={this.state.recomandGame}
             />
           }
-          <Line width={16}/>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = {
-
+  container: {
+    flex: 1,
+    marginBottom: 49,
+    backgroundColor: '#F1F4F6',
+  },
 }
 
 export default SearchPage;
